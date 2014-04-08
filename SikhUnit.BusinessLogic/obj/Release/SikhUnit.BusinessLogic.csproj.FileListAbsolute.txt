@@ -1,9 +1,0 @@
-C:\Data\Sikh Unit Website\SikhUnit.BusinessLogic\bin\Release\SikhUnit.BusinessLogic.dll
-C:\Data\Sikh Unit Website\SikhUnit.BusinessLogic\bin\Release\SikhUnit.BusinessLogic.pdb
-C:\Data\Sikh Unit Website\SikhUnit.BusinessLogic\bin\Release\SikhUnit.Domain.dll
-C:\Data\Sikh Unit Website\SikhUnit.BusinessLogic\bin\Release\SikhUnit.Domain.pdb
-C:\Data\Sikh Unit Website\SikhUnit.BusinessLogic\obj\Release\SikhUnit.BusinessLogic.csprojResolveAssemblyReference.cache
-C:\Data\Sikh Unit Website\SikhUnit.BusinessLogic\obj\Release\SikhUnit.BusinessLogic.dll
-C:\Data\Sikh Unit Website\SikhUnit.BusinessLogic\obj\Release\SikhUnit.BusinessLogic.pdb
-C:\Data\Sikh Unit Website\SikhUnit.BusinessLogic\bin\Release\SikhUnit.Configuration.dll
-C:\Data\Sikh Unit Website\SikhUnit.BusinessLogic\bin\Release\SikhUnit.Configuration.pdb

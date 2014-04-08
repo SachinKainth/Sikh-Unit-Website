@@ -1,5 +1,0 @@
-C:\Data\Sikh Unit Website\SikhUnit.Domain\bin\Debug\SikhUnit.Domain.dll
-C:\Data\Sikh Unit Website\SikhUnit.Domain\bin\Debug\SikhUnit.Domain.pdb
-C:\Data\Sikh Unit Website\SikhUnit.Domain\obj\Debug\SikhUnit.Domain.dll
-C:\Data\Sikh Unit Website\SikhUnit.Domain\obj\Debug\SikhUnit.Domain.pdb
-C:\Data\Sikh Unit Website\SikhUnit.Domain\obj\Debug\SikhUnit.Domain.csprojResolveAssemblyReference.cache
