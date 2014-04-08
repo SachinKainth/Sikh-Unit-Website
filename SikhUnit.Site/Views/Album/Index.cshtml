@@ -1,0 +1,35 @@
+﻿@using PagedList.Mvc
+@using SikhUnit.Configuration
+@using SikhUnit.Site.Models;
+
+@model AlbumListViewModel
+
+@{
+    ViewBag.Title = "Albums";
+}
+
+<h2 class="title">Albums</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-9">
+            <div class="row">
+                @for (int i = 0; i < Model.List.Count; i++)
+                {
+                    var album = Model.List[i];
+                   
+                    string path = SiteConfiguration.BaseUrl + SiteConfiguration.ContentPath + SiteConfiguration.AlbumsPath + album.Name + "/00 Front Cover.jpg";
+                    string url = new Uri(path).AbsoluteUri;
+
+                    <div class="col-sm-6 col-lg-4">
+                        <p><a href="@Url.Action("Index", "Song", new { albumId = album.Id })"><img class="image" src="@url" /></a></p>
+                        <p>@Html.ActionLink(@album.Name, "Index", "Song", new { albumId = album.Id }, new { @class = "albumName" })</p>
+                    </div>
+                }
+            </div><!--/row-->
+        </div><!--/span-->
+    </div><!--/row-->
+</div><!--/.container-->
+
+Page @(Model.List.PageCount < Model.List.PageNumber ? 0 : Model.List.PageNumber) of @Model.List.PageCount
+@Html.PagedListPager(Model.List, page => Url.Action("Index", HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString(), new { page }))

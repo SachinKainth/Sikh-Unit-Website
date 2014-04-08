@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>RecaptchaNet</id>
+    <version>1.3</version>
+    <title>Recaptcha for .NET</title>
+    <authors>Tanveer Yousuf</authors>
+    <owners>Tanveer Yousuf</owners>
+    <licenseUrl>http://recaptchanet.codeplex.com/license</licenseUrl>
+    <projectUrl>http://recaptchanet.codeplex.com/</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Recaptcha for .NET allows a developer to easily integrate Google's Recaptcha service (the most popular captcha control) in an ASP.NET Web Forms or ASP.NET MVC web application.
+
+The primary features of the library are:
+* Renders recaptcha control with appropriate options.
+* Verifies user's answer to recaptcha's challenge.
+* Supports ASP.NET 4.0 and 4.5.
+* Compatible with ASP.NET MVC 4.
+
+Recpatcha for .NET has the best and most up-to-date documentation available:
+http://recaptchanet.codeplex.com/documentation</description>
+    <summary>Quickly add Recaptcha (the most popular captcha service) in an ASP.NET Web Forms or ASP.NET MVC web application.</summary>
+    <releaseNotes>This is a consolidation release with following changes / new features:
+
+1. You can now verify a user's response to recpatcha challenge asynchronously using the new "await" keyword.
+2. By default, recpacha control uses the current UI culture's language. With this release, you can now set it manually if you want.
+3. The package adds the RecpatchaNet.ReadMe.txt file to your project to help you get started as quickly as possible.</releaseNotes>
+    <copyright>(C)2013. Tanveer Yousuf. All rights reserved.</copyright>
+    <language>en-US</language>
+    <tags>recaptcha captcha  mvc captcha recpatcha</tags>
+  </metadata>
+</package>

@@ -1,0 +1,20 @@
+﻿@using SikhUnit.Configuration
+@using SikhUnit.Site.Models
+
+@model LiteratureListViewModel
+
+@{
+    ViewBag.Title = "Literature";
+}
+
+
+<h2 class="title">Literature</h2>
+
+<ul>
+    @foreach (var literature in Model.List)
+    {
+        string path = SiteConfiguration.BaseUrl + SiteConfiguration.ContentPath + SiteConfiguration.LiteraturesPath + literature.Name;
+        string url = new Uri(path).AbsoluteUri;
+        <li><a href="@url" target="_blank">@literature.DisplayName</a></li>
+    }
+</ul>

@@ -1,0 +1,9 @@
+C:\Data\Sikh Unit Website\SikhUnit.Site.UnitTests\bin\Debug\AutoMapper.Net4.dll
+C:\Data\Sikh Unit Website\SikhUnit.Site.UnitTests\bin\Debug\SikhUnit.Site.UnitTests.dll
+C:\Data\Sikh Unit Website\SikhUnit.Site.UnitTests\bin\Debug\SikhUnit.Site.UnitTests.pdb
+C:\Data\Sikh Unit Website\SikhUnit.Site.UnitTests\bin\Debug\AutoMapper.dll
+C:\Data\Sikh Unit Website\SikhUnit.Site.UnitTests\bin\Debug\nunit.framework.dll
+C:\Data\Sikh Unit Website\SikhUnit.Site.UnitTests\bin\Debug\AutoMapper.xml
+C:\Data\Sikh Unit Website\SikhUnit.Site.UnitTests\bin\Debug\nunit.framework.xml
+C:\Data\Sikh Unit Website\SikhUnit.Site.UnitTests\obj\Debug\SikhUnit.Site.UnitTests.dll
+C:\Data\Sikh Unit Website\SikhUnit.Site.UnitTests\obj\Debug\SikhUnit.Site.UnitTests.pdb

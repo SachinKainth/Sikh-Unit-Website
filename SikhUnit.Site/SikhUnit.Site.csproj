@@ -1,0 +1,884 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{444B9796-4249-4D5F-80DE-F04A78B5CA97}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SikhUnit.Site</RootNamespace>
+    <AssemblyName>SikhUnit.Site</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <MvcBuildViews>true</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.3.1.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\packages\AutoMapper.3.1.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\packages\DotNetZip.1.9.2\lib\net20\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.3.0.1.10\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Recaptcha.Web">
+      <HintPath>..\packages\RecaptchaNet.1.3\lib\net45\Recaptcha.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.0.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.0.0\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.0.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.1.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.1.0.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.2.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.0.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.2.0.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.0.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.0.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.2.0.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.2.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.2.0.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionResults\ZipResult.cs" />
+    <Compile Include="App_Start\NinjectConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\NinjectControllerFactory.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\AutoMapperConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\Html\OtherSiteController.cs" />
+    <Compile Include="Controllers\Html\ContactUsController.cs" />
+    <Compile Include="Controllers\Html\DownloadController.cs" />
+    <Compile Include="Controllers\Html\TalkVideoController.cs" />
+    <Compile Include="Controllers\Html\SongController.cs" />
+    <Compile Include="Controllers\Html\MusicVideoController.cs" />
+    <Compile Include="Controllers\Html\ImageController.cs" />
+    <Compile Include="Controllers\Html\LiteratureController.cs" />
+    <Compile Include="Controllers\Html\AlbumController.cs" />
+    <Compile Include="Controllers\Html\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ContactUsViewModel.cs" />
+    <Compile Include="Models\OtherSiteListViewModel.cs" />
+    <Compile Include="Models\LiteratureListViewModel.cs" />
+    <Compile Include="Models\ImageListViewModel.cs" />
+    <Compile Include="Models\OtherSiteViewModel.cs" />
+    <Compile Include="Models\LiteratureViewModel.cs" />
+    <Compile Include="Models\ImageViewModel.cs" />
+    <Compile Include="Models\VideoListViewModel.cs" />
+    <Compile Include="Models\VideoViewModel.cs" />
+    <Compile Include="Models\SongListViewModel.cs" />
+    <Compile Include="Models\AlbumListViewModel.cs" />
+    <Compile Include="Models\SongViewModel.cs" />
+    <Compile Include="Models\AlbumViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Files\Mixtapes\01 From Da Streets 2 A Sikh %282005%29\00 Front Cover.jpg" />
+    <Content Include="Files\Mixtapes\01 From Da Streets 2 A Sikh %282005%29\01 Intro.mp3" />
+    <Content Include="Files\Mixtapes\01 From Da Streets 2 A Sikh %282005%29\02 Sikh Unit Anthem.mp3" />
+    <Content Include="Files\Mixtapes\01 From Da Streets 2 A Sikh %282005%29\03 U Knw How Da Unit Do.mp3" />
+    <Content Include="Files\Mixtapes\01 From Da Streets 2 A Sikh %282005%29\04 Tribute 2 Da Shaheeds.mp3" />
+    <Content Include="Files\Mixtapes\01 From Da Streets 2 A Sikh %282005%29\05 Beef Freestyle.mp3" />
+    <Content Include="Files\Mixtapes\01 From Da Streets 2 A Sikh %282005%29\06 My Life.mp3" />
+    <Content Include="Files\Mixtapes\01 From Da Streets 2 A Sikh %282005%29\07 Papu.mp3" />
+    <Content Include="Files\Mixtapes\01 From Da Streets 2 A Sikh %282005%29\08 Damn Da Racist Scumz.mp3" />
+    <Content Include="Files\Mixtapes\01 From Da Streets 2 A Sikh %282005%29\09 Drugz.mp3" />
+    <Content Include="Files\Mixtapes\01 From Da Streets 2 A Sikh %282005%29\10 Stinky Fake Friendz.mp3" />
+    <Content Include="Files\Mixtapes\01 From Da Streets 2 A Sikh %282005%29\11 Fattsooooo.mp3" />
+    <Content Include="Files\Mixtapes\02 Da Movement %282006%29\00 Front Cover.jpg" />
+    <Content Include="Files\Mixtapes\02 Da Movement %282006%29\01 Intro - Rude Awakening.mp3" />
+    <Content Include="Files\Mixtapes\02 Da Movement %282006%29\02 We Are Oppressed.mp3" />
+    <Content Include="Files\Mixtapes\02 Da Movement %282006%29\03 Who Do I Trust.mp3" />
+    <Content Include="Files\Mixtapes\02 Da Movement %282006%29\04 Slander.mp3" />
+    <Content Include="Files\Mixtapes\02 Da Movement %282006%29\05 Interlude.mp3" />
+    <Content Include="Files\Mixtapes\02 Da Movement %282006%29\06 Sacrifice of Sri Guru Teg Bahadur Ji.mp3" />
+    <Content Include="Files\Mixtapes\02 Da Movement %282006%29\07 Lying Gill.mp3" />
+    <Content Include="Files\Mixtapes\02 Da Movement %282006%29\08 Warriors Anthem.mp3" />
+    <Content Include="Files\Mixtapes\02 Da Movement %282006%29\09 Young Blud.mp3" />
+    <Content Include="Files\Mixtapes\02 Da Movement %282006%29\10 Charanjit - True Story.mp3" />
+    <Content Include="Files\Mixtapes\02 Da Movement %282006%29\11 Unity.mp3" />
+    <Content Include="Files\Mixtapes\02 Da Movement %282006%29\12 Sikh and Proud.mp3" />
+    <Content Include="Files\Mixtapes\02 Da Movement %282006%29\13 Charanjit Remix.mp3" />
+    <Content Include="Files\Mixtapes\02 Da Movement %282006%29\14 Who Do I Trust Remix.mp3" />
+    <Content Include="Files\Mixtapes\02 Da Movement %282006%29\15 Sukhi and Mukhi.mp3" />
+    <Content Include="Files\Mixtapes\03 For Da Streets By Da Streets %282007%29\00 Front Cover.jpg" />
+    <Content Include="Files\Mixtapes\03 For Da Streets By Da Streets %282007%29\01 Punjabi Bimbo.mp3" />
+    <Content Include="Files\Mixtapes\03 For Da Streets By Da Streets %282007%29\02 Im Alcohol.mp3" />
+    <Content Include="Files\Mixtapes\03 For Da Streets By Da Streets %282007%29\03 I aint no Meaterian.mp3" />
+    <Content Include="Files\Mixtapes\03 For Da Streets By Da Streets %282007%29\04 Im Reppin the 5ks.mp3" />
+    <Content Include="Files\Mixtapes\03 For Da Streets By Da Streets %282007%29\05 Heart Like Steel.mp3" />
+    <Content Include="Files\Mixtapes\03 For Da Streets By Da Streets %282007%29\06 Bruv I Got Beef.mp3" />
+    <Content Include="Files\Mixtapes\03 For Da Streets By Da Streets %282007%29\07 Keepin It Militant.mp3" />
+    <Content Include="Files\Mixtapes\03 For Da Streets By Da Streets %282007%29\08 Baba Jarnail Singh Ji Speech.mp3" />
+    <Content Include="Files\Mixtapes\03 For Da Streets By Da Streets %282007%29\09 R.I.P 2 DA Real Singhs.mp3" />
+    <Content Include="Files\Mixtapes\03 For Da Streets By Da Streets %282007%29\10 Saint Soulja.mp3" />
+    <Content Include="Files\Mixtapes\03 For Da Streets By Da Streets %282007%29\11 Sell Outs.mp3" />
+    <Content Include="Files\Mixtapes\03 For Da Streets By Da Streets %282007%29\12 True Brothers.mp3" />
+    <Content Include="Files\Mixtapes\03 For Da Streets By Da Streets %282007%29\13 Khalistani.mp3" />
+    <Content Include="Files\Mixtapes\03 For Da Streets By Da Streets %282007%29\14 I Got a Killa Mentality.mp3" />
+    <Content Include="Files\Mixtapes\03 For Da Streets By Da Streets %282007%29\15 RSS Cant Stop Us.mp3" />
+    <Content Include="Files\Mixtapes\03 For Da Streets By Da Streets %282007%29\16 Kurbani %28Sacrifices%29.mp3" />
+    <Content Include="Files\Mixtapes\03 For Da Streets By Da Streets %282007%29\17 Knifeman Anthem.mp3" />
+    <Content Include="Files\Mixtapes\03 For Da Streets By Da Streets %282007%29\18 Traitor %28Backstabbers%29.mp3" />
+    <Content Include="Files\Mixtapes\03 For Da Streets By Da Streets %282007%29\19 Fakesters %28Mukhi%29.mp3" />
+    <Content Include="Files\Mixtapes\03 For Da Streets By Da Streets %282007%29\20 Im A Weak Sikh.mp3" />
+    <Content Include="Files\Mixtapes\03 For Da Streets By Da Streets %282007%29\21 Seva Needed.mp3" />
+    <Content Include="Files\Mixtapes\04 No More Mr Nice Guy %282008%29\00 Front Cover.jpg" />
+    <Content Include="Files\Mixtapes\04 No More Mr Nice Guy %282008%29\01 Intro %28freestyle%29.mp3" />
+    <Content Include="Files\Mixtapes\04 No More Mr Nice Guy %282008%29\02 Sukhi Kaur Got Spiked.mp3" />
+    <Content Include="Files\Mixtapes\04 No More Mr Nice Guy %282008%29\03 Real Shit.mp3" />
+    <Content Include="Files\Mixtapes\04 No More Mr Nice Guy %282008%29\04 Dutty Gyal.mp3" />
+    <Content Include="Files\Mixtapes\04 No More Mr Nice Guy %282008%29\05 Islamic Extremist.mp3" />
+    <Content Include="Files\Mixtapes\04 No More Mr Nice Guy %282008%29\06 Get Ur Tool.mp3" />
+    <Content Include="Files\Mixtapes\04 No More Mr Nice Guy %282008%29\07 Meet Mr Rambo.mp3" />
+    <Content Include="Files\Mixtapes\04 No More Mr Nice Guy %282008%29\08 Freedom Fighters.mp3" />
+    <Content Include="Files\Mixtapes\04 No More Mr Nice Guy %282008%29\09 True Homies.mp3" />
+    <Content Include="Files\Mixtapes\04 No More Mr Nice Guy %282008%29\10 Amerjit Singh.mp3" />
+    <Content Include="Files\Mixtapes\04 No More Mr Nice Guy %282008%29\11 Why.mp3" />
+    <Content Include="Files\Mixtapes\04 No More Mr Nice Guy %282008%29\12 Ranjit The Druggie.mp3" />
+    <Content Include="Files\Mixtapes\04 No More Mr Nice Guy %282008%29\13 Homeland.mp3" />
+    <Content Include="Files\Mixtapes\04 No More Mr Nice Guy %282008%29\14 Gym Sessionz.mp3" />
+    <Content Include="Files\Mixtapes\05 2 Sides 2 Every Guy %282008%29\00 Front Cover.jpg" />
+    <Content Include="Files\Mixtapes\05 2 Sides 2 Every Guy %282008%29\01 My Worst Enemiez.mp3" />
+    <Content Include="Files\Mixtapes\05 2 Sides 2 Every Guy %282008%29\02 Never Forget 84.mp3" />
+    <Content Include="Files\Mixtapes\05 2 Sides 2 Every Guy %282008%29\03 Spiritual Warrior.mp3" />
+    <Content Include="Files\Mixtapes\05 2 Sides 2 Every Guy %282008%29\04 Da Khalsa Army.mp3" />
+    <Content Include="Files\Mixtapes\05 2 Sides 2 Every Guy %282008%29\05 Lil Brotherz &amp; Sistaz.mp3" />
+    <Content Include="Files\Mixtapes\05 2 Sides 2 Every Guy %282008%29\06 Enemies Remix.mp3" />
+    <Content Include="Files\Mixtapes\05 2 Sides 2 Every Guy %282008%29\07 Never Forget 84 Remix.mp3" />
+    <Content Include="Files\Mixtapes\05 2 Sides 2 Every Guy %282008%29\08 Spiritual Warrior Remix.mp3" />
+    <Content Include="Files\Mixtapes\05 2 Sides 2 Every Guy %282008%29\09 Da Khalsa Army Remix.mp3" />
+    <Content Include="Files\Mixtapes\05 2 Sides 2 Every Guy %282008%29\10 Lil Brotherz &amp; Sistaz Remix.mp3" />
+    <Content Include="Files\Mixtapes\05 2 Sides 2 Every Guy %282008%29\11 Freedom Fighterz Remix.mp3" />
+    <Content Include="Files\Mixtapes\05 2 Sides 2 Every Guy %282008%29\12 Sukhi Got Spiked Remix.mp3" />
+    <Content Include="Files\Mixtapes\05 2 Sides 2 Every Guy %282008%29\13 Da God Father Remix.mp3" />
+    <Content Include="Files\Mixtapes\06 Kill Or Be Killed %282008%29\00 Front Cover.jpg" />
+    <Content Include="Files\Mixtapes\06 Kill Or Be Killed %282008%29\01 Intro.mp3" />
+    <Content Include="Files\Mixtapes\06 Kill Or Be Killed %282008%29\02 Rip Brothers.mp3" />
+    <Content Include="Files\Mixtapes\06 Kill Or Be Killed %282008%29\03 Bang Bang.mp3" />
+    <Content Include="Files\Mixtapes\06 Kill Or Be Killed %282008%29\04 The Caste System.mp3" />
+    <Content Include="Files\Mixtapes\06 Kill Or Be Killed %282008%29\05 Aggi Freestyle.mp3" />
+    <Content Include="Files\Mixtapes\06 Kill Or Be Killed %282008%29\06 Baba Jarnail Singh Ji Speech.mp3" />
+    <Content Include="Files\Mixtapes\06 Kill Or Be Killed %282008%29\07 Clown Community.mp3" />
+    <Content Include="Files\Mixtapes\06 Kill Or Be Killed %282008%29\08 Im On Singhrow.mp3" />
+    <Content Include="Files\Mixtapes\06 Kill Or Be Killed %282008%29\09 Killaz Dream Freestyle.mp3" />
+    <Content Include="Files\Mixtapes\06 Kill Or Be Killed %282008%29\10 Mukhi Solo.mp3" />
+    <Content Include="Files\Mixtapes\06 Kill Or Be Killed %282008%29\11 Poverty Driven Childern.mp3" />
+    <Content Include="Files\Mixtapes\06 Kill Or Be Killed %282008%29\12 Jagowale Remix.mp3" />
+    <Content Include="Files\Mixtapes\06 Kill Or Be Killed %282008%29\13 Kharku Singhz Remix.mp3" />
+    <Content Include="Files\Mixtapes\06 Kill Or Be Killed %282008%29\14 True Brothers.mp3" />
+    <Content Include="Files\Mixtapes\06 Kill Or Be Killed %282008%29\15 True Stories.mp3" />
+    <Content Include="Files\Mixtapes\06 Kill Or Be Killed %282008%29\16 Underground Warriors.mp3" />
+    <Content Include="Files\Mixtapes\06 Kill Or Be Killed %282008%29\17 Unity.mp3" />
+    <Content Include="Files\Mixtapes\06 Kill Or Be Killed %282008%29\18 Homeland Remix.mp3" />
+    <Content Include="Files\Mixtapes\06 Kill Or Be Killed %282008%29\19 Get Ur Tool Remix.mp3" />
+    <Content Include="Files\Mixtapes\06 Kill Or Be Killed %282008%29\20 Outro.mp3" />
+    <Content Include="Files\Mixtapes\07 Killa - Public Demand %282008%29\00 Front Cover.jpg" />
+    <Content Include="Files\Mixtapes\07 Killa - Public Demand %282008%29\01 Intro.mp3" />
+    <Content Include="Files\Mixtapes\07 Killa - Public Demand %282008%29\02 Kuljug.mp3" />
+    <Content Include="Files\Mixtapes\07 Killa - Public Demand %282008%29\03 East London Ting.mp3" />
+    <Content Include="Files\Mixtapes\07 Killa - Public Demand %282008%29\04 Respect for Gurbani interlude.mp3" />
+    <Content Include="Files\Mixtapes\07 Killa - Public Demand %282008%29\05 Champoin Freestyle.mp3" />
+    <Content Include="Files\Mixtapes\07 Killa - Public Demand %282008%29\06 Lecture for the Papuus.mp3" />
+    <Content Include="Files\Mixtapes\07 Killa - Public Demand %282008%29\07 Payback.mp3" />
+    <Content Include="Files\Mixtapes\07 Killa - Public Demand %282008%29\08 Real life Music.mp3" />
+    <Content Include="Files\Mixtapes\07 Killa - Public Demand %282008%29\09 Shaheed Bhai Balkar Singh.mp3" />
+    <Content Include="Files\Mixtapes\07 Killa - Public Demand %282008%29\10 Shaheed Bhai Mandar Singh.mp3" />
+    <Content Include="Files\Mixtapes\07 Killa - Public Demand %282008%29\11 Da Ghetto.mp3" />
+    <Content Include="Files\Mixtapes\07 Killa - Public Demand %282008%29\12 Missions Beat.MP3" />
+    <Content Include="Files\Mixtapes\07 Killa - Public Demand %282008%29\13 Disrespect Of Gurbani.mp3" />
+    <Content Include="Files\Mixtapes\07 Killa - Public Demand %282008%29\14 I Am Armed And Dangerous.mp3" />
+    <Content Include="Files\Mixtapes\07 Killa - Public Demand %282008%29\15 We Need Unity.mp3" />
+    <Content Include="Files\Mixtapes\07 Killa - Public Demand %282008%29\16 Interview Wid Killa After Youth Program.mp3" />
+    <Content Include="Files\Mixtapes\07 Killa - Public Demand %282008%29\17 Sukha Singh Talk Remixed.mp3" />
+    <Content Include="Files\Mixtapes\07 Killa - Public Demand %282008%29\18 Killa Explainz The Ardas.mp3" />
+    <Content Include="Files\Mixtapes\07 Killa - Public Demand %282008%29\19 Im A Singh.mp3" />
+    <Content Include="Files\Mixtapes\07 Killa - Public Demand %282008%29\20 Fresh From The HMP.mp3" />
+    <Content Include="Files\Mixtapes\07 Killa - Public Demand %282008%29\21 Freedom.mp3" />
+    <Content Include="Files\Mixtapes\08 Sikh Unit - Singhs Talking Da Hardest %282009%29\00 Front Cover.jpg" />
+    <Content Include="Files\Mixtapes\08 Sikh Unit - Singhs Talking Da Hardest %282009%29\01 Intro.mp3" />
+    <Content Include="Files\Mixtapes\08 Sikh Unit - Singhs Talking Da Hardest %282009%29\02 Never Forget Bow 09.mp3" />
+    <Content Include="Files\Mixtapes\08 Sikh Unit - Singhs Talking Da Hardest %282009%29\03 I Feel Your Pain.mp3" />
+    <Content Include="Files\Mixtapes\08 Sikh Unit - Singhs Talking Da Hardest %282009%29\04 Cold World.mp3" />
+    <Content Include="Files\Mixtapes\08 Sikh Unit - Singhs Talking Da Hardest %282009%29\05 Tribute %28Killa%27s Mum%29.mp3" />
+    <Content Include="Files\Mixtapes\08 Sikh Unit - Singhs Talking Da Hardest %282009%29\06 Who Is Next.mp3" />
+    <Content Include="Files\Mixtapes\08 Sikh Unit - Singhs Talking Da Hardest %282009%29\07 Deepness.mp3" />
+    <Content Include="Files\Mixtapes\08 Sikh Unit - Singhs Talking Da Hardest %282009%29\08 Soul Story.mp3" />
+    <Content Include="Files\Mixtapes\08 Sikh Unit - Singhs Talking Da Hardest %282009%29\09 Are You Ready.mp3" />
+    <Content Include="Files\Mixtapes\08 Sikh Unit - Singhs Talking Da Hardest %282009%29\10 Cold World Remix.mp3" />
+    <Content Include="Files\Mixtapes\08 Sikh Unit - Singhs Talking Da Hardest %282009%29\11 I Feel Your Pain Remix.mp3" />
+    <Content Include="Files\Mixtapes\08 Sikh Unit - Singhs Talking Da Hardest %282009%29\12 Tribute Remix %28Killa%27s Mum%29.mp3" />
+    <Content Include="Files\Mixtapes\08 Sikh Unit - Singhs Talking Da Hardest %282009%29\13 Alone.mp3" />
+    <Content Include="Files\Mixtapes\08 Sikh Unit - Singhs Talking Da Hardest %282009%29\14 Militant Warrior %28Interlude%29.mp3" />
+    <Content Include="Files\Mixtapes\08 Sikh Unit - Singhs Talking Da Hardest %282009%29\15 25 Years Tune.mp3" />
+    <Content Include="Files\Mixtapes\08 Sikh Unit - Singhs Talking Da Hardest %282009%29\16 25 Years Freestyle.mp3" />
+    <Content Include="Files\Mixtapes\08 Sikh Unit - Singhs Talking Da Hardest %282009%29\17 Messed Up World.mp3" />
+    <Content Include="Files\Mixtapes\08 Sikh Unit - Singhs Talking Da Hardest %282009%29\18 Killa%27s Wife.mp3" />
+    <Content Include="Files\Mixtapes\08 Sikh Unit - Singhs Talking Da Hardest %282009%29\19 Eyes Of The Kharkoo.mp3" />
+    <Content Include="Files\Mixtapes\08 Sikh Unit - Singhs Talking Da Hardest %282009%29\20 Wastemans.mp3" />
+    <Content Include="Files\Mixtapes\08 Sikh Unit - Singhs Talking Da Hardest %282009%29\21 Roads.mp3" />
+    <Content Include="Files\Mixtapes\08 Sikh Unit - Singhs Talking Da Hardest %282009%29\22 Street Life.mp3" />
+    <Content Include="Files\Mixtapes\08 Sikh Unit - Singhs Talking Da Hardest %282009%29\23 Inner Thoughts.mp3" />
+    <Content Include="Files\Mixtapes\08 Sikh Unit - Singhs Talking Da Hardest %282009%29\24 Forget The Talking.mp3" />
+    <Content Include="Files\Mixtapes\08 Sikh Unit - Singhs Talking Da Hardest %282009%29\25 Talking The Hardest Part 1.mp3" />
+    <Content Include="Files\Mixtapes\08 Sikh Unit - Singhs Talking Da Hardest %282009%29\26 Talking The Hardest Part 2.mp3" />
+    <Content Include="Files\Mixtapes\08 Sikh Unit - Singhs Talking Da Hardest %282009%29\27 Talking The Hardest Part 3.mp3" />
+    <Content Include="Files\Mixtapes\08 Sikh Unit - Singhs Talking Da Hardest %282009%29\28 Outro.mp3" />
+    <Content Include="Files\Mixtapes\09 Da Reflection of Da Streetz %282009%29\00 Front Cover.jpg" />
+    <Content Include="Files\Mixtapes\09 Da Reflection of Da Streetz %282009%29\01 Intro.mp3" />
+    <Content Include="Files\Mixtapes\09 Da Reflection of Da Streetz %282009%29\02 Ghetto Ft Akon.mp3" />
+    <Content Include="Files\Mixtapes\09 Da Reflection of Da Streetz %282009%29\03 Child Hood Freinds.mp3" />
+    <Content Include="Files\Mixtapes\09 Da Reflection of Da Streetz %282009%29\04 Gritty.mp3" />
+    <Content Include="Files\Mixtapes\09 Da Reflection of Da Streetz %282009%29\05 Round Ere.mp3" />
+    <Content Include="Files\Mixtapes\09 Da Reflection of Da Streetz %282009%29\06 Will There Ever Be Peace.mp3" />
+    <Content Include="Files\Mixtapes\09 Da Reflection of Da Streetz %282009%29\07 Cry.mp3" />
+    <Content Include="Files\Mixtapes\09 Da Reflection of Da Streetz %282009%29\08 Hood Life.mp3" />
+    <Content Include="Files\Mixtapes\09 Da Reflection of Da Streetz %282009%29\09 Deep Down In My Heart.mp3" />
+    <Content Include="Files\Mixtapes\09 Da Reflection of Da Streetz %282009%29\10 Journey.mp3" />
+    <Content Include="Files\Mixtapes\09 Da Reflection of Da Streetz %282009%29\11 Hold My Hand.mp3" />
+    <Content Include="Files\Mixtapes\09 Da Reflection of Da Streetz %282009%29\12 Hold You Down.mp3" />
+    <Content Include="Files\Mixtapes\09 Da Reflection of Da Streetz %282009%29\13 Locked Up.mp3" />
+    <Content Include="Files\Mixtapes\09 Da Reflection of Da Streetz %282009%29\14 My Wifey.mp3" />
+    <Content Include="Files\Mixtapes\09 Da Reflection of Da Streetz %282009%29\15 Once We Were Warriors.mp3" />
+    <Content Include="Files\Mixtapes\09 Da Reflection of Da Streetz %282009%29\16 POW.mp3" />
+    <Content Include="Files\Mixtapes\09 Da Reflection of Da Streetz %282009%29\17 Pumpy.mp3" />
+    <Content Include="Files\Mixtapes\09 Da Reflection of Da Streetz %282009%29\18 They Out To Get Us.mp3" />
+    <Content Include="Files\Mixtapes\09 Da Reflection of Da Streetz %282009%29\19 Unity.mp3" />
+    <Content Include="Files\Mixtapes\09 Da Reflection of Da Streetz %282009%29\20 Wanna Be Gangsters.mp3" />
+    <Content Include="Files\Mixtapes\09 Da Reflection of Da Streetz %282009%29\21 Warm Up.mp3" />
+    <Content Include="Files\Mixtapes\10 Da Last Of A Dying Breed %282010%29\00 Front Cover.jpg" />
+    <Content Include="Files\Mixtapes\10 Da Last Of A Dying Breed %282010%29\01 Intro.mp3" />
+    <Content Include="Files\Mixtapes\10 Da Last Of A Dying Breed %282010%29\02 Ride Out.mp3" />
+    <Content Include="Files\Mixtapes\10 Da Last Of A Dying Breed %282010%29\03 Singh In Da Hood.mp3" />
+    <Content Include="Files\Mixtapes\10 Da Last Of A Dying Breed %282010%29\04 Still On It.mp3" />
+    <Content Include="Files\Mixtapes\10 Da Last Of A Dying Breed %282010%29\05 Yung Blud Part 2.mp3" />
+    <Content Include="Files\Mixtapes\10 Da Last Of A Dying Breed %282010%29\06 Realness.mp3" />
+    <Content Include="Files\Mixtapes\10 Da Last Of A Dying Breed %282010%29\07 Jail Letter.mp3" />
+    <Content Include="Files\Mixtapes\10 Da Last Of A Dying Breed %282010%29\08 Snake City.mp3" />
+    <Content Include="Files\Mixtapes\10 Da Last Of A Dying Breed %282010%29\09 War Story.mp3" />
+    <Content Include="Files\Mixtapes\10 Da Last Of A Dying Breed %282010%29\10 I Need To Getaway.mp3" />
+    <Content Include="Files\Mixtapes\10 Da Last Of A Dying Breed %282010%29\11 World Of Hate.mp3" />
+    <Content Include="Files\Mixtapes\10 Da Last Of A Dying Breed %282010%29\12 Real Pain.mp3" />
+    <Content Include="Files\Mixtapes\10 Da Last Of A Dying Breed %282010%29\13 Feel My Pain.mp3" />
+    <Content Include="Files\Mixtapes\10 Da Last Of A Dying Breed %282010%29\14 Verbal Cry.mp3" />
+    <Content Include="Files\Mixtapes\10 Da Last Of A Dying Breed %282010%29\15 Luv U Ma.mp3" />
+    <Content Include="Files\Mixtapes\10 Da Last Of A Dying Breed %282010%29\16 Waste Girls.mp3" />
+    <Content Include="Files\Mixtapes\10 Da Last Of A Dying Breed %282010%29\17 Chill Out On My Own.mp3" />
+    <Content Include="Files\Mixtapes\10 Da Last Of A Dying Breed %282010%29\18 Still On It Remix.mp3" />
+    <Content Include="Files\Mixtapes\11 Emotions %282010%29\00 Front Cover.jpg" />
+    <Content Include="Files\Mixtapes\11 Emotions %282010%29\01 Intro.mp3" />
+    <Content Include="Files\Mixtapes\11 Emotions %282010%29\02 Too My Sistaz.mp3" />
+    <Content Include="Files\Mixtapes\11 Emotions %282010%29\03 Mai Bhag Kaur Tribute.mp3" />
+    <Content Include="Files\Mixtapes\11 Emotions %282010%29\04 My Real Father.mp3" />
+    <Content Include="Files\Mixtapes\11 Emotions %282010%29\05 My Kirpan.mp3" />
+    <Content Include="Files\Mixtapes\11 Emotions %282010%29\06 Don%27t Forget Your History.mp3" />
+    <Content Include="Files\Mixtapes\11 Emotions %282010%29\07 Luv U Ma Part 2.mp3" />
+    <Content Include="Files\Mixtapes\11 Emotions %282010%29\08 My Message To Waheguru.mp3" />
+    <Content Include="Files\Mixtapes\11 Emotions %282010%29\09 Gun Luv.mp3" />
+    <Content Include="Files\Mixtapes\11 Emotions %282010%29\10 Deciever.mp3" />
+    <Content Include="Files\Mixtapes\11 Emotions %282010%29\11 I See Peepz.mp3" />
+    <Content Include="Files\Mixtapes\11 Emotions %282010%29\12 Fuck Bollywood.mp3" />
+    <Content Include="Files\Mixtapes\11 Emotions %282010%29\13 Come For Me.mp3" />
+    <Content Include="Files\Mixtapes\11 Emotions %282010%29\14 Hood Shit.mp3" />
+    <Content Include="Files\Mixtapes\11 Emotions %282010%29\15 I Did You Wrong.mp3" />
+    <Content Include="Files\Mixtapes\11 Emotions %282010%29\16 Ambition Freestyle.mp3" />
+    <Content Include="Files\Mixtapes\11 Emotions %282010%29\17 History Lesson.mp3" />
+    <Content Include="Files\Mixtapes\11 Emotions %282010%29\18 Mind Games.mp3" />
+    <Content Include="Files\Mixtapes\11 Emotions %282010%29\19 Wasted Time.mp3" />
+    <Content Include="Files\Mixtapes\11 Emotions %282010%29\20 2009 Radio Set.mp3" />
+    <Content Include="Files\Mixtapes\11 Emotions %282010%29\21 1st Interview About Garbage.mp3" />
+    <Content Include="Files\Mixtapes\11 Emotions %282010%29\22 2nd Interview About Garbage.mp3" />
+    <Content Include="Files\Mixtapes\11 Emotions %282010%29\23 Killa Talks About Rap Battles.mp3" />
+    <Content Include="Files\Mixtapes\11 Emotions %282010%29\24 Garbage Diss Tune.mp3" />
+    <Content Include="Files\Mixtapes\11 Emotions %282010%29\25 Is Killa Homophobic.mp3" />
+    <Content Include="Files\Mixtapes\11 Emotions %282010%29\26 Fuck Off.mp3" />
+    <Content Include="Files\Mixtapes\11 Emotions %282010%29\27 Garbage U Fudu.mp3" />
+    <Content Include="Files\Mixtapes\12 Da Singhdicate %282011%29\00 Front Cover.jpg" />
+    <Content Include="Files\Mixtapes\12 Da Singhdicate %282011%29\01 My Broken Wings.mp3" />
+    <Content Include="Files\Mixtapes\12 Da Singhdicate %282011%29\02 Burn In Hell Pig.mp3" />
+    <Content Include="Files\Mixtapes\12 Da Singhdicate %282011%29\03 My People Will Kill U.mp3" />
+    <Content Include="Files\Mixtapes\12 Da Singhdicate %282011%29\04 Deep Down Inside %28Freestyle%29.mp3" />
+    <Content Include="Files\Mixtapes\12 Da Singhdicate %282011%29\05 Its Mad Outhere.mp3" />
+    <Content Include="Files\Mixtapes\12 Da Singhdicate %282011%29\06 Fuck SOA.mp3" />
+    <Content Include="Files\Mixtapes\12 Da Singhdicate %282011%29\07 In My Presence.mp3" />
+    <Content Include="Files\Mixtapes\12 Da Singhdicate %282011%29\08 We Really Does Dis.mp3" />
+    <Content Include="Files\Mixtapes\12 Da Singhdicate %282011%29\09 Our Endz.mp3" />
+    <Content Include="Files\Mixtapes\12 Da Singhdicate %282011%29\10 Im Known In My Hood.mp3" />
+    <Content Include="Files\Mixtapes\12 Da Singhdicate %282011%29\11 Grimey Bars.mp3" />
+    <Content Include="Files\Mixtapes\12 Da Singhdicate %282011%29\12 Guru Kirpa.mp3" />
+    <Content Include="Files\Mixtapes\12 Da Singhdicate %282011%29\13 No Snitching Policy.mp3" />
+    <Content Include="Files\Mixtapes\12 Da Singhdicate %282011%29\14 Slumdog Suvivor.mp3" />
+    <Content Include="Files\Mixtapes\12 Da Singhdicate %282011%29\15 Where I Live.mp3" />
+    <Content Include="Files\Mixtapes\12 Da Singhdicate %282011%29\16 Lengman Chronicles Part 1.mp3" />
+    <Content Include="Files\Mixtapes\12 Da Singhdicate %282011%29\17 Emotional Anguish.mp3" />
+    <Content Include="Files\Mixtapes\12 Da Singhdicate %282011%29\18 War Stories.mp3" />
+    <Content Include="Files\Mixtapes\12 Da Singhdicate %282011%29\19 Da Life Of A Real Singh.mp3" />
+    <Content Include="Files\Mixtapes\12 Da Singhdicate %282011%29\20 Hood Tales.mp3" />
+    <Content Include="Files\Mixtapes\12 Da Singhdicate %282011%29\21 Pussy O%27s.mp3" />
+    <Content Include="Files\Mixtapes\12 Da Singhdicate %282011%29\22 Move It Up A Level.mp3" />
+    <Content Include="Files\Mixtapes\12 Da Singhdicate %282011%29\23 How I Feel.mp3" />
+    <Content Include="Files\Mixtapes\12 Da Singhdicate %282011%29\24 Londons One &amp; Only.mp3" />
+    <Content Include="Files\Mixtapes\12 Da Singhdicate %282011%29\25 - Internet Geeks Freestyle.mp3" />
+    <Content Include="Files\Mixtapes\12 Da Singhdicate %282011%29\26 Singh Star Freestyle.mp3" />
+    <Content Include="Files\Mixtapes\13 Product Of My Environment %282012%29\00 Front Cover.jpg" />
+    <Content Include="Files\Mixtapes\13 Product Of My Environment %282012%29\01 God Gave Me Style.mp3" />
+    <Content Include="Files\Mixtapes\13 Product Of My Environment %282012%29\02 Got To Make A Change.mp3" />
+    <Content Include="Files\Mixtapes\13 Product Of My Environment %282012%29\03 Tribute To Baba Deep Singh Ji.mp3" />
+    <Content Include="Files\Mixtapes\13 Product Of My Environment %282012%29\04 They Chat Shit About Me.mp3" />
+    <Content Include="Files\Mixtapes\13 Product Of My Environment %282012%29\05 I Got A Cruddy State Of Mind.mp3" />
+    <Content Include="Files\Mixtapes\13 Product Of My Environment %282012%29\06 My Life.mp3" />
+    <Content Include="Files\Mixtapes\13 Product Of My Environment %282012%29\07 Tingz R Not Cool.mp3" />
+    <Content Include="Files\Mixtapes\13 Product Of My Environment %282012%29\08 I Got Some Questions.mp3" />
+    <Content Include="Files\Mixtapes\13 Product Of My Environment %282012%29\09 They hate Me.mp3" />
+    <Content Include="Files\Mixtapes\13 Product Of My Environment %282012%29\10 Pains Of Da Ghetto.mp3" />
+    <Content Include="Files\Mixtapes\13 Product Of My Environment %282012%29\11 Papu Anthem.mp3" />
+    <Content Include="Files\Mixtapes\13 Product Of My Environment %282012%29\12 My Lifes A Mess.mp3" />
+    <Content Include="Files\Mixtapes\13 Product Of My Environment %282012%29\13 Im So Stressed Out.mp3" />
+    <Content Include="Files\Mixtapes\13 Product Of My Environment %282012%29\14 Message 2 Da Yungers.mp3" />
+    <Content Include="Files\Mixtapes\13 Product Of My Environment %282012%29\15 Da Streets Is My Home.mp3" />
+    <Content Include="Files\Mixtapes\13 Product Of My Environment %282012%29\16 I Keep It Gully.mp3" />
+    <Content Include="Files\Mixtapes\13 Product Of My Environment %282012%29\17 Holy Artillery.mp3" />
+    <Content Include="Files\Mixtapes\13 Product Of My Environment %282012%29\18 I Pretend To Be A Gun.mp3" />
+    <Content Include="Files\Mixtapes\13 Product Of My Environment %282012%29\19 My True Love.mp3" />
+    <Content Include="Files\Mixtapes\13 Product Of My Environment %282012%29\20 We Do It For Real Hip Hop.mp3" />
+    <Content Include="Files\Mixtapes\13 Product Of My Environment %282012%29\21 For My True Brothers.mp3" />
+    <Content Include="Files\Mixtapes\13 Product Of My Environment %282012%29\22 These R Serious Times.mp3" />
+    <Content Include="Files\Mixtapes\13 Product Of My Environment %282012%29\23 For My Real Sistaz.mp3" />
+    <Content Include="Files\Mixtapes\14 Da family Guy %282013%29\00 Front Cover.jpg" />
+    <Content Include="Files\Mixtapes\14 Da family Guy %282013%29\01. Intro Ft Shanger.mp3" />
+    <Content Include="Files\Mixtapes\14 Da family Guy %282013%29\02. Keep Going.mp3" />
+    <Content Include="Files\Mixtapes\14 Da family Guy %282013%29\03. Mad World.mp3" />
+    <Content Include="Files\Mixtapes\14 Da family Guy %282013%29\04. Real Hip Hop Sound.mp3" />
+    <Content Include="Files\Mixtapes\14 Da family Guy %282013%29\05. Stay Free.mp3" />
+    <Content Include="Files\Mixtapes\14 Da family Guy %282013%29\06. Mad World Remix.mp3" />
+    <Content Include="Files\Mixtapes\14 Da family Guy %282013%29\07. My Wifey.mp3" />
+    <Content Include="Files\Mixtapes\14 Da family Guy %282013%29\08. Tough Times.mp3" />
+    <Content Include="Files\Mixtapes\14 Da family Guy %282013%29\09. Letter To Butch Singh.mp3" />
+    <Content Include="Files\Mixtapes\14 Da family Guy %282013%29\10. Long Time Ago.mp3" />
+    <Content Include="Files\Mixtapes\14 Da family Guy %282013%29\11. Trying To Stay Alive.mp3" />
+    <Content Include="Files\Mixtapes\14 Da family Guy %282013%29\12. To My Little Yout.mp3" />
+    <Content Include="Files\Mixtapes\14 Da family Guy %282013%29\13. Violence.mp3" />
+    <Content Include="Files\Mixtapes\14 Da family Guy %282013%29\14. Long Time Ago Remix.mp3" />
+    <Content Include="Files\Mixtapes\14 Da family Guy %282013%29\15. Not The Bless Type.mp3" />
+    <Content Include="Files\Mixtapes\14 Da family Guy %282013%29\16. Stay Schemin.mp3" />
+    <Content Include="Files\Mixtapes\14 Da family Guy %282013%29\17. Slap A Hoe Campaign.mp3" />
+    <Content Include="Files\Mixtapes\14 Da family Guy %282013%29\18. The Slums.mp3" />
+    <Content Include="Files\Mixtapes\14 Da family Guy %282013%29\19. War Anthem.mp3" />
+    <Content Include="Files\Mixtapes\14 Da family Guy %282013%29\20. Straight Riders.mp3" />
+    <Content Include="Files\Mixtapes\14 Da family Guy %282013%29\21. Innocent People.mp3" />
+    <Content Include="Files\Mixtapes\14 Da family Guy %282013%29\22. Destiny Sound.mp3" />
+    <Content Include="Files\Mixtapes\14 Da family Guy %282013%29\23. Hide &amp; kill Freestyle.mp3" />
+    <Content Include="Files\Mixtapes\14 Da family Guy %282013%29\24. Dark Clouds.mp3" />
+    <Content Include="Files\Mixtapes\14 Da family Guy %282013%29\25. Mind Blow.mp3" />
+    <Content Include="Files\Mixtapes\15 Da Lost Tapes %282013%29\00 Front Cover.jpg" />
+    <Content Include="Files\Mixtapes\15 Da Lost Tapes %282013%29\01 All I Have Seen.mp3" />
+    <Content Include="Files\Mixtapes\15 Da Lost Tapes %282013%29\02 Dis Is Killa.mp3" />
+    <Content Include="Files\Mixtapes\15 Da Lost Tapes %282013%29\03 My Life Is Fucked.mp3" />
+    <Content Include="Files\Mixtapes\15 Da Lost Tapes %282013%29\04 I Got U.mp3" />
+    <Content Include="Files\Mixtapes\15 Da Lost Tapes %282013%29\05 Diss 2 Fat Sikhs.mp3" />
+    <Content Include="Files\Mixtapes\15 Da Lost Tapes %282013%29\06 Bitten By A Snake.mp3" />
+    <Content Include="Files\Mixtapes\15 Da Lost Tapes %282013%29\07 Ovarian Cancer.mp3" />
+    <Content Include="Files\Mixtapes\15 Da Lost Tapes %282013%29\08 Bitch Singh.mp3" />
+    <Content Include="Files\Mixtapes\15 Da Lost Tapes %282013%29\09 Death Is Approaching.mp3" />
+    <Content Include="Files\Mixtapes\15 Da Lost Tapes %282013%29\10 Hood Legends.mp3" />
+    <Content Include="Files\Mixtapes\15 Da Lost Tapes %282013%29\11 Murda Ya.mp3" />
+    <Content Include="Files\Mixtapes\15 Da Lost Tapes %282013%29\12 We Spit Dat Hard Shit.mp3" />
+    <Content Include="Files\Mixtapes\15 Da Lost Tapes %282013%29\13 Letter To B Man.mp3" />
+    <Content Include="Files\Mixtapes\15 Da Lost Tapes %282013%29\14 Letter To B Man %28Part 2%29.mp3" />
+    <Content Include="Files\Mixtapes\15 Da Lost Tapes %282013%29\15 Letter To B Man %28Part 3%29.mp3" />
+    <Content Include="Files\Mixtapes\15 Da Lost Tapes %282013%29\16 Pains &amp; Struggle.mp3" />
+    <Content Include="Files\Mixtapes\15 Da Lost Tapes %282013%29\17 Pains &amp; Struggle Remix.mp3" />
+    <Content Include="Files\Mixtapes\15 Da Lost Tapes %282013%29\18 We Aint Living Right.mp3" />
+    <Content Include="Files\Mixtapes\15 Da Lost Tapes %282013%29\19 Khalsa Aid Tribute.mp3" />
+    <Content Include="Files\Mixtapes\15 Da Lost Tapes %282013%29\20 Neva Understand My Pain.mp3" />
+    <Content Include="Files\Mixtapes\15 Da Lost Tapes %282013%29\21 Neva Undastand My Pain Part 2.mp3" />
+    <Content Include="Files\Mixtapes\15 Da Lost Tapes %282013%29\22 Our Hometown.mp3" />
+    <Content Include="Files\Mixtapes\15 Da Lost Tapes %282013%29\23 Make Em Lean Back Wid Skengz.mp3" />
+    <Content Include="Files\Mixtapes\15 Da Lost Tapes %282013%29\24 Real Killers.mp3" />
+    <Content Include="Files\Mixtapes\15 Da Lost Tapes %282013%29\25 Real Talk %28Hard Shit%29.mp3" />
+    <Content Include="Files\Mixtapes\15 Da Lost Tapes %282013%29\26 Da Murder Plot.mp3" />
+    <Content Include="Files\Mixtapes\15 Da Lost Tapes %282013%29\27 Natural Born Killers.mp3" />
+    <Content Include="Files\Mixtapes\15 Da Lost Tapes %282013%29\28 Natural Born Killers Instrumental.mp3" />
+    <Content Include="Files\Mixtapes\15 Da Lost Tapes %282013%29\29 Top Boyz Freestyle.mp3" />
+    <Content Include="Files\Mixtapes\16 Killa - Interviews &amp; 3styles CD\00 Front Cover.jpg" />
+    <Content Include="Files\Mixtapes\16 Killa - Interviews &amp; 3styles CD\01 Interview By Akaal Org.mp3" />
+    <Content Include="Files\Mixtapes\16 Killa - Interviews &amp; 3styles CD\02 Interview By LHM.mp3" />
+    <Content Include="Files\Mixtapes\16 Killa - Interviews &amp; 3styles CD\03 Interview &amp; Exclusive 3style In 2011.mp3" />
+    <Content Include="Files\Mixtapes\16 Killa - Interviews &amp; 3styles CD\04 2nd Interview By LHM.mp3" />
+    <Content Include="Files\Mixtapes\16 Killa - Interviews &amp; 3styles CD\05 Killa Explains Why Sikh Unit Is One Of Da Realest Gangs.mp3" />
+    <Content Include="Files\Mixtapes\16 Killa - Interviews &amp; 3styles CD\06 I am Not Racist But I Am Paronoid.mp3" />
+    <Content Include="Files\Mixtapes\16 Killa - Interviews &amp; 3styles CD\07 Killa Confronts FB Haterz.mp3" />
+    <Content Include="Files\Mixtapes\16 Killa - Interviews &amp; 3styles CD\08 Killa Argues Wid a Sikh Womens Association!.mp3" />
+    <Content Include="Files\Mixtapes\16 Killa - Interviews &amp; 3styles CD\09 Extracts From 3 Different Interviews.mp3" />
+    <Content Include="Files\Mixtapes\16 Killa - Interviews &amp; 3styles CD\10 Killa Talks About Dress sense.mp3" />
+    <Content Include="Files\Mixtapes\16 Killa - Interviews &amp; 3styles CD\11 Killa Confronts Bullshit Rumors.mp3" />
+    <Content Include="Files\Mixtapes\16 Killa - Interviews &amp; 3styles CD\12 Killa Talks On Attempt On His Life.mp3" />
+    <Content Include="Files\Mixtapes\16 Killa - Interviews &amp; 3styles CD\13 We Are Not Your Role Models.mp3" />
+    <Content Include="Files\Mixtapes\16 Killa - Interviews &amp; 3styles CD\14 Da Gap Between Sikhi &amp; Da Streetz.mp3" />
+    <Content Include="Files\Mixtapes\16 Killa - Interviews &amp; 3styles CD\15 The Last Interview.mp3" />
+    <Content Include="Files\Mixtapes\16 Killa - Interviews &amp; 3styles CD\16 Killa 3styles Part 1.mp3" />
+    <Content Include="Files\Mixtapes\16 Killa - Interviews &amp; 3styles CD\17 Killa 3styles Part 2.mp3" />
+    <Content Include="Files\Mixtapes\16 Killa - Interviews &amp; 3styles CD\18 Killa 3styles Part 3.mp3" />
+    <Content Include="Files\Mixtapes\16 Killa - Interviews &amp; 3styles CD\19 Last Ever 3style!.mp3" />
+    <Content Include="Files\Mixtapes\17 Killaz Fav Instrumentals\00 Front Cover.jpg" />
+    <Content Include="Files\Mixtapes\17 Killaz Fav Instrumentals\01 Holler.mp3" />
+    <Content Include="Files\Mixtapes\17 Killaz Fav Instrumentals\02 Tell Me Do U Wanna.mp3" />
+    <Content Include="Files\Mixtapes\17 Killaz Fav Instrumentals\03 World Is So Cold.mp3" />
+    <Content Include="Files\Mixtapes\17 Killaz Fav Instrumentals\04 Lonely Daze.mp3" />
+    <Content Include="Files\Mixtapes\17 Killaz Fav Instrumentals\05 G. Thang.mp3" />
+    <Content Include="Files\Mixtapes\17 Killaz Fav Instrumentals\06 Try Again.mp3" />
+    <Content Include="Files\Mixtapes\17 Killaz Fav Instrumentals\07 Coulda Been.mp3" />
+    <Content Include="Files\Music Videos\25 Years Tune.wmv" />
+    <Content Include="Files\Music Videos\Are You Ready.wmv" />
+    <Content Include="Files\Music Videos\Chill On My Own.wmv" />
+    <Content Include="Files\Music Videos\Cold World.wmv" />
+    <Content Include="Files\Music Videos\Da Ghetto.wmv" />
+    <Content Include="Files\Music Videos\Da Journey.wmv" />
+    <Content Include="Files\Music Videos\Dis Is Killa.wmv" />
+    <Content Include="Files\Music Videos\Don%27t Forget Your History.wmv" />
+    <Content Include="Files\Music Videos\East End Hood Tour.wmv" />
+    <Content Include="Files\Music Videos\Feel My Pain.wmv" />
+    <Content Include="Files\Music Videos\History Lesson.wmv" />
+    <Content Include="Files\Music Videos\Hood Shit.wmv" />
+    <Content Include="Files\Music Videos\Hood Training For The Poor.wmv" />
+    <Content Include="Files\Music Videos\Khalsa Aid Tribute.wmv" />
+    <Content Include="Files\Music Videos\Letter To B Man Part 3.wmv" />
+    <Content Include="Files\Music Videos\LHM Freestyle.wmv" />
+    <Content Include="Files\Music Videos\Mind Games.wmv" />
+    <Content Include="Files\Music Videos\My Real Father.wmv" />
+    <Content Include="Files\Music Videos\Ride Out Ft Butch Singh.wmv" />
+    <Content Include="Files\Music Videos\Singhs Talking Da Hardest Part 2.wmv" />
+    <Content Include="Files\Music Videos\Singhs Talking The Hardest Part 3.wmv" />
+    <Content Include="Files\Music Videos\True Brothers.wmv" />
+    <Content Include="Files\Music Videos\U Can Neva Understand My Pain.wmv" />
+    <Content Include="Files\Music Videos\Wasted Time.wmv" />
+    <Content Include="Files\Music Videos\We Spit Dat Hard Shit.wmv" />
+    <Content Include="Files\Other Files\Khanda.jpg" />
+    <Content Include="Files\Other Files\Parental-Advisory.jpg" />
+    <Content Include="Files\Our Logos\logoblack.JPG" />
+    <Content Include="Files\Our Logos\logowhite.JPG" />
+    <Content Include="Files\Our Logos\Sikh Unit - Official Logo.gif" />
+    <Content Include="Files\Our Logos\Sikh unit listen while you can.jpg" />
+    <Content Include="Files\Pictures of Sikh History\01.jpg" />
+    <Content Include="Files\Pictures of Sikh History\02.JPG" />
+    <Content Include="Files\Pictures of Sikh History\03.jpg" />
+    <Content Include="Files\Pictures of Sikh History\04.JPG" />
+    <Content Include="Files\Pictures of Sikh History\05.jpg" />
+    <Content Include="Files\Pictures of Sikh History\06.jpg" />
+    <Content Include="Files\Pictures of Sikh History\07.jpg" />
+    <Content Include="Files\Pictures of Sikh History\08.jpg" />
+    <Content Include="Files\Pictures of Sikh History\09.jpg" />
+    <Content Include="Files\Pictures of Sikh History\10.jpg" />
+    <Content Include="Files\Pictures of Sikh History\100.jpg" />
+    <Content Include="Files\Pictures of Sikh History\101.jpg" />
+    <Content Include="Files\Pictures of Sikh History\102.jpg" />
+    <Content Include="Files\Pictures of Sikh History\103.jpg" />
+    <Content Include="Files\Pictures of Sikh History\104.jpg" />
+    <Content Include="Files\Pictures of Sikh History\105.jpg" />
+    <Content Include="Files\Pictures of Sikh History\106.jpg" />
+    <Content Include="Files\Pictures of Sikh History\107.jpg" />
+    <Content Include="Files\Pictures of Sikh History\108.jpg" />
+    <Content Include="Files\Pictures of Sikh History\109.jpg" />
+    <Content Include="Files\Pictures of Sikh History\11.jpg" />
+    <Content Include="Files\Pictures of Sikh History\110.jpg" />
+    <Content Include="Files\Pictures of Sikh History\111.jpg" />
+    <Content Include="Files\Pictures of Sikh History\112.jpg" />
+    <Content Include="Files\Pictures of Sikh History\113.jpg" />
+    <Content Include="Files\Pictures of Sikh History\114.jpg" />
+    <Content Include="Files\Pictures of Sikh History\115.jpg" />
+    <Content Include="Files\Pictures of Sikh History\116.jpg" />
+    <Content Include="Files\Pictures of Sikh History\117.jpg" />
+    <Content Include="Files\Pictures of Sikh History\118.jpg" />
+    <Content Include="Files\Pictures of Sikh History\119.jpg" />
+    <Content Include="Files\Pictures of Sikh History\12.jpg" />
+    <Content Include="Files\Pictures of Sikh History\120.jpg" />
+    <Content Include="Files\Pictures of Sikh History\121.jpg" />
+    <Content Include="Files\Pictures of Sikh History\122.jpg" />
+    <Content Include="Files\Pictures of Sikh History\123.JPG" />
+    <Content Include="Files\Pictures of Sikh History\124.jpg" />
+    <Content Include="Files\Pictures of Sikh History\125.jpg" />
+    <Content Include="Files\Pictures of Sikh History\126.jpg" />
+    <Content Include="Files\Pictures of Sikh History\127.jpg" />
+    <Content Include="Files\Pictures of Sikh History\128.jpg" />
+    <Content Include="Files\Pictures of Sikh History\129.jpg" />
+    <Content Include="Files\Pictures of Sikh History\13.jpg" />
+    <Content Include="Files\Pictures of Sikh History\130.jpg" />
+    <Content Include="Files\Pictures of Sikh History\131.jpg" />
+    <Content Include="Files\Pictures of Sikh History\132.JPG" />
+    <Content Include="Files\Pictures of Sikh History\133.jpg" />
+    <Content Include="Files\Pictures of Sikh History\134.jpg" />
+    <Content Include="Files\Pictures of Sikh History\135.jpg" />
+    <Content Include="Files\Pictures of Sikh History\136.jpg" />
+    <Content Include="Files\Pictures of Sikh History\137.jpg" />
+    <Content Include="Files\Pictures of Sikh History\138.jpg" />
+    <Content Include="Files\Pictures of Sikh History\139.jpg" />
+    <Content Include="Files\Pictures of Sikh History\14.jpg" />
+    <Content Include="Files\Pictures of Sikh History\140.jpg" />
+    <Content Include="Files\Pictures of Sikh History\141.jpg" />
+    <Content Include="Files\Pictures of Sikh History\15.jpg" />
+    <Content Include="Files\Pictures of Sikh History\16.jpg" />
+    <Content Include="Files\Pictures of Sikh History\17.jpg" />
+    <Content Include="Files\Pictures of Sikh History\18.jpg" />
+    <Content Include="Files\Pictures of Sikh History\19.jpg" />
+    <Content Include="Files\Pictures of Sikh History\20.jpg" />
+    <Content Include="Files\Pictures of Sikh History\21.jpg" />
+    <Content Include="Files\Pictures of Sikh History\22.jpg" />
+    <Content Include="Files\Pictures of Sikh History\23.jpg" />
+    <Content Include="Files\Pictures of Sikh History\24.jpg" />
+    <Content Include="Files\Pictures of Sikh History\25.jpg" />
+    <Content Include="Files\Pictures of Sikh History\26.jpg" />
+    <Content Include="Files\Pictures of Sikh History\27.JPG" />
+    <Content Include="Files\Pictures of Sikh History\28.jpg" />
+    <Content Include="Files\Pictures of Sikh History\29.jpg" />
+    <Content Include="Files\Pictures of Sikh History\30.JPG" />
+    <Content Include="Files\Pictures of Sikh History\31.jpg" />
+    <Content Include="Files\Pictures of Sikh History\32.jpg" />
+    <Content Include="Files\Pictures of Sikh History\33.jpg" />
+    <Content Include="Files\Pictures of Sikh History\34.jpg" />
+    <Content Include="Files\Pictures of Sikh History\35.jpg" />
+    <Content Include="Files\Pictures of Sikh History\36.jpg" />
+    <Content Include="Files\Pictures of Sikh History\37.jpg" />
+    <Content Include="Files\Pictures of Sikh History\38.jpg" />
+    <Content Include="Files\Pictures of Sikh History\39.jpg" />
+    <Content Include="Files\Pictures of Sikh History\40.jpg" />
+    <Content Include="Files\Pictures of Sikh History\41.jpg" />
+    <Content Include="Files\Pictures of Sikh History\42.jpg" />
+    <Content Include="Files\Pictures of Sikh History\43.jpg" />
+    <Content Include="Files\Pictures of Sikh History\44.jpg" />
+    <Content Include="Files\Pictures of Sikh History\45.jpg" />
+    <Content Include="Files\Pictures of Sikh History\46.JPG" />
+    <Content Include="Files\Pictures of Sikh History\47.jpg" />
+    <Content Include="Files\Pictures of Sikh History\48.jpg" />
+    <Content Include="Files\Pictures of Sikh History\49.jpg" />
+    <Content Include="Files\Pictures of Sikh History\50.jpg" />
+    <Content Include="Files\Pictures of Sikh History\51.jpg" />
+    <Content Include="Files\Pictures of Sikh History\52.jpg" />
+    <Content Include="Files\Pictures of Sikh History\53.jpg" />
+    <Content Include="Files\Pictures of Sikh History\54.jpg" />
+    <Content Include="Files\Pictures of Sikh History\55.jpg" />
+    <Content Include="Files\Pictures of Sikh History\56.jpg" />
+    <Content Include="Files\Pictures of Sikh History\57.jpg" />
+    <Content Include="Files\Pictures of Sikh History\58.jpg" />
+    <Content Include="Files\Pictures of Sikh History\59.jpg" />
+    <Content Include="Files\Pictures of Sikh History\60.jpg" />
+    <Content Include="Files\Pictures of Sikh History\61.jpg" />
+    <Content Include="Files\Pictures of Sikh History\62.jpg" />
+    <Content Include="Files\Pictures of Sikh History\63.jpg" />
+    <Content Include="Files\Pictures of Sikh History\64.jpg" />
+    <Content Include="Files\Pictures of Sikh History\65.jpg" />
+    <Content Include="Files\Pictures of Sikh History\66.jpg" />
+    <Content Include="Files\Pictures of Sikh History\67.jpg" />
+    <Content Include="Files\Pictures of Sikh History\68.jpg" />
+    <Content Include="Files\Pictures of Sikh History\69.jpg" />
+    <Content Include="Files\Pictures of Sikh History\70.jpg" />
+    <Content Include="Files\Pictures of Sikh History\71.jpg" />
+    <Content Include="Files\Pictures of Sikh History\72.jpg" />
+    <Content Include="Files\Pictures of Sikh History\73.jpg" />
+    <Content Include="Files\Pictures of Sikh History\74.jpg" />
+    <Content Include="Files\Pictures of Sikh History\75.jpg" />
+    <Content Include="Files\Pictures of Sikh History\76.bmp" />
+    <Content Include="Files\Pictures of Sikh History\77.jpg" />
+    <Content Include="Files\Pictures of Sikh History\78.jpg" />
+    <Content Include="Files\Pictures of Sikh History\79.jpg" />
+    <Content Include="Files\Pictures of Sikh History\80.jpg" />
+    <Content Include="Files\Pictures of Sikh History\81.gif" />
+    <Content Include="Files\Pictures of Sikh History\82.jpg" />
+    <Content Include="Files\Pictures of Sikh History\83.JPG" />
+    <Content Include="Files\Pictures of Sikh History\84.jpg" />
+    <Content Include="Files\Pictures of Sikh History\85.jpg" />
+    <Content Include="Files\Pictures of Sikh History\86.jpg" />
+    <Content Include="Files\Pictures of Sikh History\87.jpg" />
+    <Content Include="Files\Pictures of Sikh History\88.jpg" />
+    <Content Include="Files\Pictures of Sikh History\89.jpg" />
+    <Content Include="Files\Pictures of Sikh History\90.jpg" />
+    <Content Include="Files\Pictures of Sikh History\91.jpg" />
+    <Content Include="Files\Pictures of Sikh History\92.jpg" />
+    <Content Include="Files\Pictures of Sikh History\93.jpg" />
+    <Content Include="Files\Pictures of Sikh History\94.jpg" />
+    <Content Include="Files\Pictures of Sikh History\95.jpg" />
+    <Content Include="Files\Pictures of Sikh History\96.jpg" />
+    <Content Include="Files\Pictures of Sikh History\97.jpg" />
+    <Content Include="Files\Pictures of Sikh History\98.jpg" />
+    <Content Include="Files\Pictures of Sikh History\99.jpg" />
+    <Content Include="Files\Talks On Sikh History By Sikh Unit\Ancestry Blood.wmv" />
+    <Content Include="Files\Talks On Sikh History By Sikh Unit\Da Iron Clan.wmv" />
+    <Content Include="Files\Talks On Sikh History By Sikh Unit\Guts &amp; Glory.wmv" />
+    <Content Include="Files\Talks On Sikh History By Sikh Unit\Prayer For Protection.wmv" />
+    <Content Include="Content\jquery.excoloSlider.css" />
+    <Content Include="Content\PagedList.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Images\next.png" />
+    <Content Include="Images\pagericon.png" />
+    <Content Include="Images\prev.png" />
+    <Content Include="RecaptchaNet.ReadMe.txt" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Files\Literature\Sikh Pride Book By Sikh Unit.docx.pdf" />
+    <None Include="Properties\PublishProfiles\Release.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.excoloSlider.js" />
+    <Content Include="Scripts\jquery.excoloSlider.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="sql\LiteratureAddColumnDisplayName.sql" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Image\Index.cshtml" />
+    <Content Include="Views\Literature\Index.cshtml" />
+    <Content Include="Views\Shared\Videos.cshtml" />
+    <Content Include="Views\Song\Index.cshtml" />
+    <Content Include="Views\Album\Index.cshtml" />
+    <Content Include="Views\ContactUs\Contact.cshtml" />
+    <Content Include="Views\ContactUs\ContactConfirm.cshtml" />
+    <Content Include="Views\OtherSite\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Controllers\Api\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SikhUnit.BusinessLogic\SikhUnit.BusinessLogic.csproj">
+      <Project>{bfd628a0-ced5-4c59-aceb-45745c03aed0}</Project>
+      <Name>SikhUnit.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SikhUnit.Cache\SikhUnit.Cache.csproj">
+      <Project>{F3E90A00-5FB3-47FF-9FCF-6B50E94B49E7}</Project>
+      <Name>SikhUnit.Cache</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SikhUnit.Configuration\SikhUnit.Configuration.csproj">
+      <Project>{0EF17DD8-168D-441B-80A6-AF82CEF18ED5}</Project>
+      <Name>SikhUnit.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SikhUnit.DataAccess\SikhUnit.DataAccess.csproj">
+      <Project>{2B0AB643-496C-4B20-BA46-7893AB9E6F55}</Project>
+      <Name>SikhUnit.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SikhUnit.Domain\SikhUnit.Domain.csproj">
+      <Project>{0459a94d-e2c4-4a82-b779-b72a16940b23}</Project>
+      <Name>SikhUnit.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <MvcBuildViews>true</MvcBuildViews>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49563</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49563/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,4 @@
+C:\Data\Sikh Unit Website\SikhUnit.Configuration\bin\Debug\SikhUnit.Configuration.dll
+C:\Data\Sikh Unit Website\SikhUnit.Configuration\bin\Debug\SikhUnit.Configuration.pdb
+C:\Data\Sikh Unit Website\SikhUnit.Configuration\obj\Debug\SikhUnit.Configuration.dll
+C:\Data\Sikh Unit Website\SikhUnit.Configuration\obj\Debug\SikhUnit.Configuration.pdb

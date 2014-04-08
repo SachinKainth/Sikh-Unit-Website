@@ -1,0 +1,51 @@
+﻿@using SikhUnit.Configuration
+@using SikhUnit.Site.Models;
+
+@model SongListViewModel
+
+@{
+    ViewBag.Title = "Songs";
+}
+
+<h2 class="title">Songs</h2>
+
+<div class="row">
+    <div class="col-lg-6">
+
+        <p>
+            @{
+                string albumPath = SiteConfiguration.BaseUrl + SiteConfiguration.ContentPath + SiteConfiguration.AlbumsPath + Model.AlbumName + "/00 Front Cover.jpg";
+                string albumUrl = new Uri(albumPath).AbsoluteUri;
+
+                <div>
+                    <p><img class="image" src="@albumUrl" /></p>
+                    <br />
+                </div>
+            }
+        </p>
+    </div>
+
+    <div class="col-lg-6">
+        <p><h3>@Model.AlbumName</h3></p>
+        <br />
+        <p>
+            @foreach (var song in Model.List)
+            {
+                <div>
+                    <p>
+                        @{
+                            string path = SiteConfiguration.BaseUrl + SiteConfiguration.ContentPath + SiteConfiguration.AlbumsPath + Model.AlbumName + "/" + song.Name;
+                            string url = new Uri(path).AbsoluteUri;
+                        }
+                        <a href="@url">@song.Name</a>
+                    </p>
+                </div>
+            }
+        </p>
+
+        <p>
+            <br />
+            @Html.ActionLink("Download full album as zip file", "Download", "Download", new { albumId = Model.AlbumId }, new { @class = "zip-download" })
+        </p>
+    </div>
+</div>

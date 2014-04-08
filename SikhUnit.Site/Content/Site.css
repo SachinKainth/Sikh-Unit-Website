@@ -1,0 +1,101 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.logo {
+    width: 100%;
+}
+
+.logo2 {
+    width: 30%;
+}
+
+.advisory {
+    width: 145px;
+    height: 99px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.advisory-no-align {
+    width: 145px;
+    height: 99px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.linebreak {
+    line-break: strict;
+}
+
+h2.title {
+    color: brown;
+}
+
+img.image {
+    width: 200px;
+    height: 200px;
+}
+
+.zip-download {
+    color: #800000;
+    font-size: 15px;
+    line-height: 2.5;
+    border-radius: 2px;
+}
+
+.mainTitle {
+    text-align: center;
+}
+
+.albumName {
+    font-size: 11px;
+}
+
+.contact-form {
+    width: 600px;
+}
+
+textarea.message {
+    height: 300px;
+}

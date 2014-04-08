@@ -1,0 +1,17 @@
+﻿@using SikhUnit.Site.Models
+
+@model OtherSiteListViewModel
+
+@{
+    ViewBag.Title = "Our Other Sites";
+}
+
+
+<h2 class="title">Our Other Sites</h2>
+
+<ul>
+    @foreach (var otherSite in Model.List)
+    {
+        <li><a href="@otherSite.Url" target="_blank">@otherSite.DisplayName</a></li>
+    }
+</ul>

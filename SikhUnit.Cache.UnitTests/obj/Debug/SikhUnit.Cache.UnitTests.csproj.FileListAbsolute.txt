@@ -1,0 +1,11 @@
+C:\Data\Sikh Unit Website\SikhUnit.Cache.UnitTests\bin\Debug\SikhUnit.Cache.UnitTests.dll
+C:\Data\Sikh Unit Website\SikhUnit.Cache.UnitTests\bin\Debug\SikhUnit.Cache.UnitTests.pdb
+C:\Data\Sikh Unit Website\SikhUnit.Cache.UnitTests\bin\Debug\nunit.framework.dll
+C:\Data\Sikh Unit Website\SikhUnit.Cache.UnitTests\bin\Debug\SikhUnit.Cache.dll
+C:\Data\Sikh Unit Website\SikhUnit.Cache.UnitTests\bin\Debug\SikhUnit.Domain.dll
+C:\Data\Sikh Unit Website\SikhUnit.Cache.UnitTests\bin\Debug\SikhUnit.Cache.pdb
+C:\Data\Sikh Unit Website\SikhUnit.Cache.UnitTests\bin\Debug\SikhUnit.Domain.pdb
+C:\Data\Sikh Unit Website\SikhUnit.Cache.UnitTests\bin\Debug\nunit.framework.xml
+C:\Data\Sikh Unit Website\SikhUnit.Cache.UnitTests\obj\Debug\SikhUnit.Cache.UnitTests.csprojResolveAssemblyReference.cache
+C:\Data\Sikh Unit Website\SikhUnit.Cache.UnitTests\obj\Debug\SikhUnit.Cache.UnitTests.dll
+C:\Data\Sikh Unit Website\SikhUnit.Cache.UnitTests\obj\Debug\SikhUnit.Cache.UnitTests.pdb

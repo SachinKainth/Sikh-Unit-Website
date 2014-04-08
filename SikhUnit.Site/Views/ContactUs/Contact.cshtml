@@ -1,0 +1,56 @@
+﻿@using SikhUnit.Site.Models;
+@using Recaptcha.Web.Mvc;
+
+@model ContactViewModel
+
+@{
+    ViewBag.Title = "Contact Sikh Unit";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    
+    <h2 class="title">Contact Us</h2>
+    
+    <fieldset>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.Name, new { @class = "contact-form form-control" })
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EmailAddress)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.EmailAddress, new { @class = "contact-form form-control" })
+            @Html.ValidationMessageFor(model => model.EmailAddress)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Subject)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.Subject, new { @class = "contact-form form-control" })
+            @Html.ValidationMessageFor(model => model.Subject)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Message)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.Message, new { @class = "contact-form form-control message" })
+            @Html.ValidationMessageFor(model => model.Message)
+        </div>
+
+        <br/>
+        
+        @Html.Recaptcha(theme: Recaptcha.Web.RecaptchaTheme.Blackglass)
+        
+        <br />
+
+        <p>
+            <input type="submit" value="Send" class="btn btn-default" />
+        </p>
+    </fieldset>
+}

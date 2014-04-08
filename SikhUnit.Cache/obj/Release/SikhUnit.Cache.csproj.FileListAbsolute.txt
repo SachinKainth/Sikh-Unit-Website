@@ -1,0 +1,7 @@
+C:\Data\Sikh Unit Website\SikhUnit.Cache\bin\Release\SikhUnit.Cache.dll
+C:\Data\Sikh Unit Website\SikhUnit.Cache\bin\Release\SikhUnit.Cache.pdb
+C:\Data\Sikh Unit Website\SikhUnit.Cache\bin\Release\SikhUnit.Domain.dll
+C:\Data\Sikh Unit Website\SikhUnit.Cache\bin\Release\SikhUnit.Domain.pdb
+C:\Data\Sikh Unit Website\SikhUnit.Cache\obj\Release\SikhUnit.Cache.csprojResolveAssemblyReference.cache
+C:\Data\Sikh Unit Website\SikhUnit.Cache\obj\Release\SikhUnit.Cache.dll
+C:\Data\Sikh Unit Website\SikhUnit.Cache\obj\Release\SikhUnit.Cache.pdb

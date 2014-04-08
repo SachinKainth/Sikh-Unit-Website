@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BC9A15AB-826A-407C-BB06-3B1FE5C5DE17}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SikhUnit.BusinessLogic.IntegrationTests</RootNamespace>
+    <AssemblyName>SikhUnit.BusinessLogic.IntegrationTests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ImageServiceTests.cs" />
+    <Compile Include="OtherSiteServiceTests.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LiteratureServiceTests.cs" />
+    <Compile Include="MusicVideoServiceTests.cs" />
+    <Compile Include="SongServiceTests.cs" />
+    <Compile Include="TalkVideoServiceTests.cs" />
+    <Compile Include="AlbumServiceTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SikhUnit.BusinessLogic\SikhUnit.BusinessLogic.csproj">
+      <Project>{BFD628A0-CED5-4C59-ACEB-45745C03AED0}</Project>
+      <Name>SikhUnit.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SikhUnit.Cache\SikhUnit.Cache.csproj">
+      <Project>{F3E90A00-5FB3-47FF-9FCF-6B50E94B49E7}</Project>
+      <Name>SikhUnit.Cache</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SikhUnit.Configuration\SikhUnit.Configuration.csproj">
+      <Project>{0EF17DD8-168D-441B-80A6-AF82CEF18ED5}</Project>
+      <Name>SikhUnit.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SikhUnit.DataAccess\SikhUnit.DataAccess.csproj">
+      <Project>{2B0AB643-496C-4B20-BA46-7893AB9E6F55}</Project>
+      <Name>SikhUnit.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SikhUnit.Domain\SikhUnit.Domain.csproj">
+      <Project>{0459A94D-E2C4-4A82-B779-B72A16940B23}</Project>
+      <Name>SikhUnit.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
