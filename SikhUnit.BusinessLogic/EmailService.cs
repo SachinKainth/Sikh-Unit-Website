@@ -12,7 +12,7 @@ namespace SikhUnit.BusinessLogic
             var mail = new MailMessage(
                 contact.EmailAddress,
                 SiteConfiguration.ContactUsToEmailAddress,
-                contact.Subject,
+                SiteConfiguration.EmailSubjectPrefix + contact.Subject,
                 contact.Message);
             mail.ReplyToList.Add(new MailAddress(contact.EmailAddress));
 
