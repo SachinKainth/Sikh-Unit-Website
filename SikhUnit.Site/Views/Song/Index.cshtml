@@ -45,7 +45,11 @@
 
         <p>
             <br />
-            @Html.ActionLink("Download full album as zip file", "Download", "Download", new { albumId = Model.AlbumId }, new { @class = "zip-download" })
+            @{
+                string zipPath = SiteConfiguration.BaseUrl + SiteConfiguration.ContentPath + SiteConfiguration.AlbumsPath + Model.AlbumName + ".zip";
+                string zipUrl = new Uri(zipPath).AbsoluteUri;
+            }
+            <a href="@zipUrl" class="zip-download">Download full album as zip file</a>
         </p>
     </div>
 </div>

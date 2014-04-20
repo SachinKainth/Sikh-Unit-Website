@@ -54,9 +54,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="Ionic.Zip">
-      <HintPath>..\packages\DotNetZip.1.9.2\lib\net20\Ionic.Zip.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Ninject">
       <HintPath>..\packages\Ninject.3.0.1.10\lib\net45-full\Ninject.dll</HintPath>
@@ -186,7 +183,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActionResults\ZipResult.cs" />
     <Compile Include="App_Start\NinjectConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -196,7 +192,6 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\Html\OtherSiteController.cs" />
     <Compile Include="Controllers\Html\ContactUsController.cs" />
-    <Compile Include="Controllers\Html\DownloadController.cs" />
     <Compile Include="Controllers\Html\TalkVideoController.cs" />
     <Compile Include="Controllers\Html\SongController.cs" />
     <Compile Include="Controllers\Html\MusicVideoController.cs" />
@@ -757,26 +752,37 @@
     <Content Include="Files\Talks On Sikh History By Sikh Unit\Da Iron Clan.wmv" />
     <Content Include="Files\Talks On Sikh History By Sikh Unit\Guts &amp; Glory.wmv" />
     <Content Include="Files\Talks On Sikh History By Sikh Unit\Prayer For Protection.wmv" />
-    <Content Include="Content\jquery.excoloSlider.css" />
     <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Images\next.png" />
-    <Content Include="Images\pagericon.png" />
-    <Content Include="Images\prev.png" />
     <Content Include="RecaptchaNet.ReadMe.txt" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Files\Literature\Sikh Pride Book By Sikh Unit.docx.pdf" />
+    <Content Include="Files\Mixtapes\01 From Da Streets 2 A Sikh %282005%29.zip" />
+    <Content Include="Files\Mixtapes\02 Da Movement %282006%29.zip" />
+    <Content Include="Files\Mixtapes\03 For Da Streets By Da Streets %282007%29.zip" />
+    <Content Include="Files\Mixtapes\04 No More Mr Nice Guy %282008%29.zip" />
+    <Content Include="Files\Mixtapes\05 2 Sides 2 Every Guy %282008%29.zip" />
+    <Content Include="Files\Mixtapes\06 Kill Or Be Killed %282008%29.zip" />
+    <Content Include="Files\Mixtapes\07 Killa - Public Demand %282008%29.zip" />
+    <Content Include="Files\Mixtapes\08 Sikh Unit - Singhs Talking Da Hardest %282009%29.zip" />
+    <Content Include="Files\Mixtapes\09 Da Reflection of Da Streetz %282009%29.zip" />
+    <Content Include="Files\Mixtapes\10 Da Last Of A Dying Breed %282010%29.zip" />
+    <Content Include="Files\Mixtapes\11 Emotions %282010%29.zip" />
+    <Content Include="Files\Mixtapes\12 Da Singhdicate %282011%29.zip" />
+    <Content Include="Files\Mixtapes\13 Product Of My Environment %282012%29.zip" />
+    <Content Include="Files\Mixtapes\14 Da family Guy %282013%29.zip" />
+    <Content Include="Files\Mixtapes\15 Da Lost Tapes %282013%29.zip" />
+    <Content Include="Files\Mixtapes\16 Killa - Interviews &amp; 3styles CD.zip" />
+    <Content Include="Files\Mixtapes\17 Killaz Fav Instrumentals.zip" />
     <None Include="Properties\PublishProfiles\Release.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.excoloSlider.js" />
-    <Content Include="Scripts\jquery.excoloSlider.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
