@@ -1,0 +1,34 @@
+﻿@using SikhUnit.Configuration
+@using SikhUnit.Site.Models
+
+@model VideoListViewModel
+
+<h2 class="title">@ViewBag.Title</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-9">
+            <div class="row">
+                @foreach (var video in Model.List)
+                {
+                    string path = SiteConfiguration.BaseUrl + SiteConfiguration.ContentPath + Model.VideoFolderName + video.Name;
+                    string url = new Uri(path).AbsoluteUri;
+
+                    <div class="col-sm-6 col-lg-4">
+                        <h4>@video.ExtensionLessName</h4>
+                        <object id="mediaplayer" classid="clsid:22d6f312-b0f6-11d0-94ab-0080c74c7e95" codebase="http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#version=5,1,52,701" standby="loading microsoft windows media player components..." type="video/x-ms-wmv">
+                            <param name="filename" value="@url">
+                            <param name="animationatstart" value="false">
+                            <param name="transparentatstart" value="false">
+                            <param name="autostart" value="false">
+                            <param name="showcontrols" value="true">
+                            <param name="ShowStatusBar" value="true">
+                            <param name="windowlessvideo" value="true">
+                            <embed src="@url" autostart="false" showcontrols="true" showstatusbar="1" bgcolor="white">
+                        </object> 
+                    </div>
+                }
+            </div><!--/row-->
+        </div><!--/span-->
+    </div><!--/row-->
+</div><!--/.container-->

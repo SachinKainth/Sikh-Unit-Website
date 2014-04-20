@@ -190,6 +190,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\AutoMapperConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\Html\TestController.cs" />
     <Compile Include="Controllers\Html\OtherSiteController.cs" />
     <Compile Include="Controllers\Html\ContactUsController.cs" />
     <Compile Include="Controllers\Html\TalkVideoController.cs" />
@@ -815,6 +816,8 @@
     <Content Include="Views\ContactUs\Contact.cshtml" />
     <Content Include="Views\ContactUs\ContactConfirm.cshtml" />
     <Content Include="Views\OtherSite\Index.cshtml" />
+    <Content Include="Views\Test\VideosOnServer.cshtml" />
+    <Content Include="Views\Test\VideosOnYouTube.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
