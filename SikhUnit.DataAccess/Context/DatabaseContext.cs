@@ -12,11 +12,8 @@ namespace SikhUnit.DataAccess.Context
         }
 
         public IDbSet<Album> Albums { get; set; }
-        public IDbSet<Image> Images { get; set; }
         public IDbSet<Literature> Literatures { get; set; }
-        public IDbSet<MusicVideo> MusicVideos { get; set; }
         public IDbSet<Song> Songs { get; set; }
-        public IDbSet<TalkVideo> TalkVideos { get; set; }
         public IDbSet<Contact> Contacts { get; set; }
         public IDbSet<OtherSite> OtherSites { get; set; }
     }

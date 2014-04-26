@@ -1,8 +1,6 @@
 ﻿using System.Data.Entity;
 using System.Data.Entity.Migrations;
-using System.Globalization;
 using System.Linq;
-using System.Text;
 using SikhUnit.DataAccess.Context;
 using SikhUnit.Domain.Entity;
 
@@ -18,12 +16,9 @@ namespace SikhUnit.DataAccess.Migrations
 
         protected override void Seed(DatabaseContext context)
         {
-            InsertPictures(context);
             InsertLiteratures(context);
             InsertAlbums(context);
             InsertSongs(context);
-            InsertMusicVideos(context);
-            InsertTalkVideos(context);
             InsertOtherSites(context);
         }
 
@@ -38,47 +33,6 @@ namespace SikhUnit.DataAccess.Migrations
         private void InsertLiteratures(DatabaseContext context)
         {
             context.Literatures.AddOrUpdate(s => s.Name, new Literature { Name = "Sikh Pride Book By Sikh Unit.docx.pdf", DisplayName = "Sikh Pride by Sikh Unit" });
-
-            context.SaveChanges();
-        }
-
-        private void InsertTalkVideos(DatabaseContext context)
-        {
-            context.TalkVideos.AddOrUpdate(s => s.Name, new TalkVideo { Name = "Ancestry Blood.wmv" });
-            context.TalkVideos.AddOrUpdate(s => s.Name, new TalkVideo { Name = "Da Iron Clan.wmv" });
-            context.TalkVideos.AddOrUpdate(s => s.Name, new TalkVideo { Name = "Guts & Glory.wmv" });
-            context.TalkVideos.AddOrUpdate(s => s.Name, new TalkVideo { Name = "Prayer For Protection.wmv" });
-
-            context.SaveChanges();
-        }
-
-        private void InsertMusicVideos(DatabaseContext context)
-        {
-            context.MusicVideos.AddOrUpdate(s => s.Name, new MusicVideo { Name = "25 Years Tune.wmv" });
-            context.MusicVideos.AddOrUpdate(s => s.Name, new MusicVideo { Name = "Are You Ready.wmv" });
-            context.MusicVideos.AddOrUpdate(s => s.Name, new MusicVideo { Name = "Chill On My Own.wmv" });
-            context.MusicVideos.AddOrUpdate(s => s.Name, new MusicVideo { Name = "Cold World.wmv" });
-            context.MusicVideos.AddOrUpdate(s => s.Name, new MusicVideo { Name = "Da Ghetto.wmv" });
-            context.MusicVideos.AddOrUpdate(s => s.Name, new MusicVideo { Name = "Da Journey.wmv" });
-            context.MusicVideos.AddOrUpdate(s => s.Name, new MusicVideo { Name = "Dis Is Killa.wmv" });
-            context.MusicVideos.AddOrUpdate(s => s.Name, new MusicVideo { Name = "Don't Forget Your History.wmv" });
-            context.MusicVideos.AddOrUpdate(s => s.Name, new MusicVideo { Name = "East End Hood Tour.wmv" });
-            context.MusicVideos.AddOrUpdate(s => s.Name, new MusicVideo { Name = "Feel My Pain.wmv" });
-            context.MusicVideos.AddOrUpdate(s => s.Name, new MusicVideo { Name = "History Lesson.wmv" });
-            context.MusicVideos.AddOrUpdate(s => s.Name, new MusicVideo { Name = "Hood Shit.wmv" });
-            context.MusicVideos.AddOrUpdate(s => s.Name, new MusicVideo { Name = "Hood Training For The Poor.wmv" });
-            context.MusicVideos.AddOrUpdate(s => s.Name, new MusicVideo { Name = "Khalsa Aid Tribute.wmv" });
-            context.MusicVideos.AddOrUpdate(s => s.Name, new MusicVideo { Name = "Letter To B Man Part 3.wmv" });
-            context.MusicVideos.AddOrUpdate(s => s.Name, new MusicVideo { Name = "LHM Freestyle.wmv" });
-            context.MusicVideos.AddOrUpdate(s => s.Name, new MusicVideo { Name = "Mind Games.wmv" });
-            context.MusicVideos.AddOrUpdate(s => s.Name, new MusicVideo { Name = "My Real Father.wmv" });
-            context.MusicVideos.AddOrUpdate(s => s.Name, new MusicVideo { Name = "Ride Out Ft Butch Singh.wmv" });
-            context.MusicVideos.AddOrUpdate(s => s.Name, new MusicVideo { Name = "Singhs Talking Da Hardest Part 2.wmv" });
-            context.MusicVideos.AddOrUpdate(s => s.Name, new MusicVideo { Name = "Singhs Talking The Hardest Part 3.wmv" });
-            context.MusicVideos.AddOrUpdate(s => s.Name, new MusicVideo { Name = "True Brothers.wmv" });
-            context.MusicVideos.AddOrUpdate(s => s.Name, new MusicVideo { Name = "U Can Neva Understand My Pain.wmv" });
-            context.MusicVideos.AddOrUpdate(s => s.Name, new MusicVideo { Name = "Wasted Time.wmv" });
-            context.MusicVideos.AddOrUpdate(s => s.Name, new MusicVideo { Name = "We Spit Dat Hard Shit.wmv" });
 
             context.SaveChanges();
         }
@@ -523,54 +477,6 @@ namespace SikhUnit.DataAccess.Migrations
             context.Albums.AddOrUpdate(a => a.Name, new Album { AlbumNumber = 17, Name = "17 Killaz Fav Instrumentals" });
 
             context.SaveChanges();
-        }
-
-        private void InsertPictures(DatabaseContext context)
-        {
-            for (int i = 1; i <= 141; i++)
-            {
-                var fileName = new StringBuilder();
-
-                var filePart = GetFilePart(i);
-                fileName.Append(filePart);
-
-                var extension = GetExtension(i);
-                fileName.Append(extension);
-
-                context.Images.AddOrUpdate(
-                    img => img.Name,
-                    new Image { Name = fileName.ToString() });
-            }
-
-            context.SaveChanges();
-        }
-
-        private static string GetExtension(int i)
-        {
-            string extension;
-            switch (i)
-            {
-                case 76:
-                    extension = ".bmp";
-                    break;
-                case 81:
-                    extension = ".gif";
-                    break;
-                default:
-                    extension = ".jpg";
-                    break;
-            }
-            return extension;
-        }
-
-        private static string GetFilePart(int i)
-        {
-            string file = i.ToString(CultureInfo.InvariantCulture);
-            if (i < 10)
-            {
-                file = "0" + i;
-            }
-            return file;
         }
     }
 }

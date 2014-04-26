@@ -20,7 +20,7 @@ namespace SikhUnit.Cache.UnitTests
         [Test]
         public void GetCacheItem_CacheEmpty_ReturnsNull()
         {
-            string key = typeof (TalkVideo).Name;
+            string key = typeof (Album).Name;
 
             _entityCache.RemoveFromCache(key);
             var entities = _entityCache.GetCacheItem(key);

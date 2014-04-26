@@ -27,18 +27,6 @@ namespace SikhUnit.Site
             kernel.Bind<ISongRepository>().To<SongRepository>();
             kernel.Bind<IDbSetWrapper<Song>>().To<DbSetWrapper<Song>>();
 
-            kernel.Bind<IMusicVideoService>().To<MusicVideoService>();
-            kernel.Bind<IMusicVideoRepository>().To<MusicVideoRepository>();
-            kernel.Bind<IDbSetWrapper<MusicVideo>>().To<DbSetWrapper<MusicVideo>>();
-
-            kernel.Bind<ITalkVideoService>().To<TalkVideoService>();
-            kernel.Bind<ITalkVideoRepository>().To<TalkVideoRepository>();
-            kernel.Bind<IDbSetWrapper<TalkVideo>>().To<DbSetWrapper<TalkVideo>>();
-
-            kernel.Bind<IImageService>().To<ImageService>();
-            kernel.Bind<IImageRepository>().To<ImageRepository>();
-            kernel.Bind<IDbSetWrapper<Image>>().To<DbSetWrapper<Image>>();
-
             kernel.Bind<ILiteratureService>().To<LiteratureService>();
             kernel.Bind<ILiteratureRepository>().To<LiteratureRepository>();
             kernel.Bind<IDbSetWrapper<Literature>>().To<DbSetWrapper<Literature>>();

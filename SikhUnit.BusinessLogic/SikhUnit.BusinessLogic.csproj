@@ -45,9 +45,6 @@
     <Compile Include="ContactService.cs" />
     <Compile Include="SongService.cs" />
     <Compile Include="AlbumService.cs" />
-    <Compile Include="TalkVideoService.cs" />
-    <Compile Include="MusicVideoService.cs" />
-    <Compile Include="ImageService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -60,12 +60,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\ContactRepository.cs" />
     <Compile Include="Repository\AlbumRepository.cs" />
-    <Compile Include="Repository\ImageRepository.cs" />
     <Compile Include="Repository\OtherSiteRepository.cs" />
     <Compile Include="Repository\LiteratureRepository.cs" />
-    <Compile Include="Repository\MusicVideoRepository.cs" />
     <Compile Include="Repository\SongRepository.cs" />
-    <Compile Include="Repository\TalkVideoRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

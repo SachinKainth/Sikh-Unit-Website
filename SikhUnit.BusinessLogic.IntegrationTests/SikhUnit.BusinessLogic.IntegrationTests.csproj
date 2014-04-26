@@ -50,14 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ImageServiceTests.cs" />
     <Compile Include="OtherSiteServiceTests.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="LiteratureServiceTests.cs" />
-    <Compile Include="MusicVideoServiceTests.cs" />
     <Compile Include="SongServiceTests.cs" />
-    <Compile Include="TalkVideoServiceTests.cs" />
     <Compile Include="AlbumServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
