@@ -10,7 +10,7 @@ namespace SikhUnit.Configuration
         public static string BaseUrl { get { return ConfigurationManager.AppSettings["BaseUrl"]; } }
         public static int DurationMinutes { get { return int.Parse(ConfigurationManager.AppSettings["DurationMinutes"]); } }
         public static int AlbumPageSize { get { return int.Parse(ConfigurationManager.AppSettings["AlbumPageSize"]); } }
-        public static string EmailSubjectPrefix { get { return ConfigurationManager.AppSettings["EmailSubjectPrefix"]; } }
+        public static string EmailSubject { get { return ConfigurationManager.AppSettings["EmailSubject"]; } }
         public static string ContactUsToEmailAddress { get { return ConfigurationManager.AppSettings["ContactUsToEmailAddress"]; } }
     }
 }
