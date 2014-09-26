@@ -31,20 +31,10 @@ namespace SikhUnit.Site
             kernel.Bind<ILiteratureRepository>().To<LiteratureRepository>();
             kernel.Bind<IDbSetWrapper<Literature>>().To<DbSetWrapper<Literature>>();
 
-            kernel.Bind<IOtherSiteService>().To<OtherSiteService>();
-            kernel.Bind<IOtherSiteRepository>().To<OtherSiteRepository>();
-            kernel.Bind<IDbSetWrapper<OtherSite>>().To<DbSetWrapper<OtherSite>>();
-
             kernel
                 .Bind<IEntityCache>()
                 .ToMethod(context => EntityCache.Instance(SiteConfiguration.DurationMinutes))
                 .InSingletonScope();
-
-            kernel.Bind<IEmailService>().To<EmailService>();
-
-            kernel.Bind<IContactService>().To<ContactService>();
-            kernel.Bind<IContactRepository>().To<ContactRepository>();
-            kernel.Bind<IDbSetWrapper<Contact>>().To<DbSetWrapper<Contact>>();
         }
     }
 }

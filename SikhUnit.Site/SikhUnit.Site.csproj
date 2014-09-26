@@ -190,8 +190,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\AutoMapperConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\Html\OtherSiteController.cs" />
-    <Compile Include="Controllers\Html\ContactUsController.cs" />
     <Compile Include="Controllers\Html\SongController.cs" />
     <Compile Include="Controllers\Html\LiteratureController.cs" />
     <Compile Include="Controllers\Html\AlbumController.cs" />
@@ -199,10 +197,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\ContactUsViewModel.cs" />
-    <Compile Include="Models\OtherSiteListViewModel.cs" />
     <Compile Include="Models\LiteratureListViewModel.cs" />
-    <Compile Include="Models\OtherSiteViewModel.cs" />
     <Compile Include="Models\LiteratureViewModel.cs" />
     <Compile Include="Models\SongListViewModel.cs" />
     <Compile Include="Models\AlbumListViewModel.cs" />
@@ -616,6 +611,7 @@
     <Content Include="Scripts\_references.js" />
     <Content Include="sql\AddTableOtherSites.sql" />
     <Content Include="sql\ContactsAddColumnsIPAddressDateTimeOffset.sql" />
+    <Content Include="sql\DropTablesOtherSitesAndContactUs.sql" />
     <Content Include="sql\DropTablesImagesMusicVideosTalkVideos.sql" />
     <Content Include="sql\LiteratureAddColumnDisplayName.sql" />
     <Content Include="Web.config">
@@ -636,9 +632,6 @@
     <Content Include="Views\Literature\Index.cshtml" />
     <Content Include="Views\Song\Index.cshtml" />
     <Content Include="Views\Album\Index.cshtml" />
-    <Content Include="Views\ContactUs\Contact.cshtml" />
-    <Content Include="Views\ContactUs\ContactConfirm.cshtml" />
-    <Content Include="Views\OtherSite\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -11,8 +11,6 @@ namespace SikhUnit.Site
             Mapper.CreateMap<Album, AlbumViewModel>();
             Mapper.CreateMap<Song, SongViewModel>();
             Mapper.CreateMap<Literature, LiteratureViewModel>();
-            Mapper.CreateMap<OtherSite, OtherSiteViewModel>();
-            Mapper.CreateMap<ContactViewModel, Contact>();
         }
     }
 }

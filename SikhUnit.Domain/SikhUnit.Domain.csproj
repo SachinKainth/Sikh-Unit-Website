@@ -40,9 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entity\Contact.cs" />
-    <Compile Include="Entity\OtherSite.cs" />
-    <Compile Include="Interface\Core\IWritableRepository.cs" />
     <Compile Include="Interface\Core\INamedEntity.cs" />
     <Compile Include="Interface\Core\IName.cs" />
     <Compile Include="Interface\Core\IEntity.cs" />
@@ -50,15 +47,10 @@
     <Compile Include="Entity\Literature.cs" />
     <Compile Include="Entity\Album.cs" />
     <Compile Include="Entity\Song.cs" />
-    <Compile Include="Interface\Repository\IContactRepository.cs" />
     <Compile Include="Interface\Repository\IAlbumRepository.cs" />
-    <Compile Include="Interface\Repository\IOtherSiteRepository.cs" />
     <Compile Include="Interface\Repository\ISongRepository.cs" />
     <Compile Include="Interface\Repository\ILiteratureRepository.cs" />
-    <Compile Include="Interface\Service\IContactService.cs" />
     <Compile Include="Interface\Service\IAlbumService.cs" />
-    <Compile Include="Interface\Service\IEmailService.cs" />
-    <Compile Include="Interface\Service\IOtherSiteService.cs" />
     <Compile Include="Interface\Service\ILiteratureService.cs" />
     <Compile Include="Interface\Service\ISongService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

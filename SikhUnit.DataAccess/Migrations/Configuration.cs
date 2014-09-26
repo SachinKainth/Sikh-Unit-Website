@@ -19,15 +19,6 @@ namespace SikhUnit.DataAccess.Migrations
             InsertLiteratures(context);
             InsertAlbums(context);
             InsertSongs(context);
-            InsertOtherSites(context);
-        }
-
-        private void InsertOtherSites(DatabaseContext context)
-        {
-            context.OtherSites.AddOrUpdate(s => s.DisplayName, new OtherSite { DisplayName = "Sikh Unit YouTube Site", Url = "https://www.youtube.com/channel/UCP3IcdHmY_rRRdiObLWQebQ" });
-            context.OtherSites.AddOrUpdate(s => s.DisplayName, new OtherSite { DisplayName = "Sikh Unit BlogSpot Site", Url = "http://www.officialsikhunit.blogspot.co.uk" });
-
-            context.SaveChanges();
         }
 
         private void InsertLiteratures(DatabaseContext context)

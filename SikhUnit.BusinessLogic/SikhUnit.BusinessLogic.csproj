@@ -39,10 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EmailService.cs" />
-    <Compile Include="OtherSiteService.cs" />
     <Compile Include="LiteratureService.cs" />
-    <Compile Include="ContactService.cs" />
     <Compile Include="SongService.cs" />
     <Compile Include="AlbumService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

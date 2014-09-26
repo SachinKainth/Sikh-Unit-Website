@@ -53,14 +53,11 @@
     <Compile Include="Context\DatabaseContext.cs" />
     <Compile Include="Core\DbSetWrapper.cs" />
     <Compile Include="Core\IDbSetWrapper.cs" />
-    <Compile Include="Core\WritableRepository.cs" />
     <Compile Include="Core\Repository.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\DatabaseInitialiser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\ContactRepository.cs" />
     <Compile Include="Repository\AlbumRepository.cs" />
-    <Compile Include="Repository\OtherSiteRepository.cs" />
     <Compile Include="Repository\LiteratureRepository.cs" />
     <Compile Include="Repository\SongRepository.cs" />
   </ItemGroup>
