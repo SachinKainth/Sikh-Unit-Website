@@ -209,6 +209,8 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Files\Literature\Images\Sikh Pride.jpg" />
+    <Content Include="Files\Literature\Images\The Forbidden Truth.jpg" />
     <Content Include="Files\Mixtapes\01 From Da Streets 2 A Sikh %282005%29\00 Front Cover.jpg" />
     <Content Include="Files\Mixtapes\01 From Da Streets 2 A Sikh %282005%29\01 Intro.mp3" />
     <Content Include="Files\Mixtapes\01 From Da Streets 2 A Sikh %282005%29\02 Sikh Unit Anthem.mp3" />
@@ -596,6 +598,7 @@
     <Content Include="Files\Mixtapes\15 Da Lost Tapes %282013%29.zip" />
     <Content Include="Files\Mixtapes\16 Killa - Interviews &amp; 3styles CD.zip" />
     <Content Include="Files\Mixtapes\17 Killaz Fav Instrumentals.zip" />
+    <Content Include="Files\Literature\The-Forbidden-Truth.pdf" />
     <None Include="Properties\PublishProfiles\Release.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

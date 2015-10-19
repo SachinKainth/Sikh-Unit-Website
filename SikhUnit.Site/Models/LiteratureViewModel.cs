@@ -9,5 +9,8 @@ namespace SikhUnit.Site.Models
 
         [Required]
         public string DisplayName { get; set; }
+
+        [Required]
+        public string ImageName { get; set; }
     }
 }

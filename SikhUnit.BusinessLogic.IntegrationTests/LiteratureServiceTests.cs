@@ -14,23 +14,47 @@ namespace SikhUnit.BusinessLogic.IntegrationTests
     [TestFixture]
     class LiteratureServiceTests
     {
-        [Test]
-        public void GetAllLiteratures__AllCorrectLiteratureNames()
+        private static List<Literature> GetLiteratures()
         {
             EntityCache cache = EntityCache.Instance(SiteConfiguration.DurationMinutes);
 
             var literatureContext = new DatabaseContext();
-            ILiteratureService literatureService = 
+            ILiteratureService literatureService =
                 new LiteratureService(
                     new LiteratureRepository(literatureContext, new DbSetWrapper<Literature>(literatureContext), cache));
 
             List<Literature> literatures = literatureService.GetAllLiteratures();
+            return literatures;
+        }
+
+        [Test]
+        public void GetAllLiteratures__AllCorrectLiteratureNames()
+        {
+            var literatures = GetLiteratures();
 
             foreach (var literature in literatures)
             {
                 string path = Path.Combine(SiteConfiguration.ContentPath, SiteConfiguration.LiteraturesPath, literature.Name);
                 Assert.IsTrue(File.Exists(path));
             }
+        }
+
+        [Test]
+        public void GetAllLiteratures__AllCorrectLiteratureImageNames()
+        {
+            var literatures = GetLiteratures();
+
+            foreach (var literature in literatures)
+            {
+                string path = Path.Combine(SiteConfiguration.ContentPath, SiteConfiguration.LiteraturesImagesPath, literature.ImageName);
+                Assert.IsTrue(File.Exists(path));
+            }
+        }
+
+        [Test]
+        public void GetAllLiteratures__CorrectNumberOfLiteratures()
+        {
+            var literatures = GetLiteratures();
 
             string[] allLiteraturePaths = Directory.GetFiles(Path.Combine(SiteConfiguration.ContentPath, SiteConfiguration.LiteraturesPath));
 

@@ -7,14 +7,22 @@
     ViewBag.Title = "Literature";
 }
 
-
 <h2 class="title">Literature</h2>
 
 <ul>
     @foreach (var literature in Model.List)
     {
-        string path = SiteConfiguration.BaseUrl + SiteConfiguration.ContentPath + SiteConfiguration.LiteraturesPath + literature.Name;
-        string url = new Uri(path).AbsoluteUri;
-        <li><a href="@url" target="_blank">@literature.DisplayName</a></li>
+        string documentPath = SiteConfiguration.BaseUrl + SiteConfiguration.ContentPath + SiteConfiguration.LiteraturesPath + literature.Name;
+        string documentUrl = new Uri(documentPath).AbsoluteUri;
+
+        string imagePath = SiteConfiguration.BaseUrl + SiteConfiguration.ContentPath + SiteConfiguration.LiteraturesImagesPath + literature.ImageName;
+        string imageUrl = new Uri(imagePath).AbsoluteUri;
+
+        <li>
+            <a href="@documentUrl" target="_blank">
+                <img class="literature-image" src="@imageUrl" />
+                @literature.DisplayName
+            </a>
+        </li>
     }
 </ul>

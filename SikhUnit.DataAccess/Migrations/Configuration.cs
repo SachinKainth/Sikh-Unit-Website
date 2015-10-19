@@ -23,7 +23,18 @@ namespace SikhUnit.DataAccess.Migrations
 
         private void InsertLiteratures(DatabaseContext context)
         {
-            context.Literatures.AddOrUpdate(s => s.Name, new Literature { Name = "Sikh Pride Book By Sikh Unit.docx.pdf", DisplayName = "Sikh Pride by Sikh Unit" });
+            context.Literatures.AddOrUpdate(s => s.Name, new Literature
+                                                         {
+                                                             Name = "Sikh Pride Book By Sikh Unit.docx.pdf", 
+                                                             DisplayName = "Sikh Pride by Sikh Unit",
+                                                             ImageName = "Sikh Pride.jpg"
+                                                         });
+            context.Literatures.AddOrUpdate(s => s.Name, new Literature
+                                                         {
+                                                             Name = "The-Forbidden-Truth.pdf", 
+                                                             DisplayName = "The Forbidden Truth by Killa from Sikh Unit",
+                                                             ImageName = "The Forbidden Truth.jpg"
+                                                         });
 
             context.SaveChanges();
         }
