@@ -616,6 +616,7 @@
     <Content Include="sql\ContactsAddColumnsIPAddressDateTimeOffset.sql" />
     <Content Include="sql\DropTablesOtherSitesAndContactUs.sql" />
     <Content Include="sql\DropTablesImagesMusicVideosTalkVideos.sql" />
+    <Content Include="sql\LiteratureAddColumnImageName.sql" />
     <Content Include="sql\LiteratureAddColumnDisplayName.sql" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
